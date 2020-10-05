@@ -1,0 +1,348 @@
+<!-- Note that there *may* be some CORS access denied or prompt on IE 9 currently since CORS isnt fully setup on dev server and wont play nice with IE9. However there exists workarounds, just 
+not implemented yet in this prototype.-->
+<!-- prototype only as a devemlopment POC-->
+<!--Did not use polymer or web components because of IE incompatibility and also polymer forces shadowDOM and therefore could 
+not utilize light DOM loaded styles.-->
+
+<!-- Open prototype of custom elements of light DOM using webcompontsjs as polyfill.
+<!-- Attributes and contents that are updated after initial rendering are not handled in this POC, howver will not take much effort to implement and should be handled for a production use. -->
+
+<!-- ICON ELEMENT START -->
+<script>
+    (function(window, document, undefined) {
+    var thatDoc = document;
+    var MyElementProto = Object.create(HTMLElement.prototype);
+    MyElementProto.__proto__ == HTMLButtonElement.prototype;
+    MyElementProto.createdCallback = function() {
+       this.innerHTML = '<svg class="icon wikiglyph-'+this.getAttribute('icon')+'"><use xlink:href="MW/icons.svg#wikiglyph-'+this.getAttribute('icon')+'"></use></svg>';   
+    };
+    
+    thatDoc.registerElement('wiki-icon', {prototype: MyElementProto});
+})(window, document);
+
+</script>
+<!-- ICON ELEMENT END-->
+<!-- CARD ELEMENT START -->
+<template id="wikicardportrait">
+    <div class="panel panel-default">
+        <img src="" class="img-responsive" alt="Portrait of Ada Lovelace">
+        <div class="attribution-text">
+           
+        </div>
+        <div class="card-body">
+            <h5></h5>
+            <p></p>
+        </div>
+        <div class="card-footer">
+        </div>
+    </div>
+</template>
+<template id="wikicardlandscape">
+    <div class="panel panel-default col-md-12 no-gutter">
+        <img src="" class="img-responsive col-md-6 no-gutter">
+        <div class="card-body col-md-6">
+            <h5></h5>
+            <p></p>
+        </div>
+        <div class="attribution-text col-md-6 attribution-bottom">
+           
+        </div>
+    </div>
+</template>
+<script>
+    (function(window, document, undefined) {
+    var thatDoc = document;
+    var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+    var MyElementProto = Object.create(HTMLElement.prototype);
+    MyElementProto.createdCallback = function() {
+        this.orientation = this.getAttribute('orientation')||'portrait';
+        var template = thisDoc.querySelector('#wikicard'+this.orientation).content;
+        var clone = thatDoc.importNode(template, true);
+        var div = clone.querySelector('div');
+        div.setAttribute('style',this.getAttribute('style'));
+        this.image = clone.querySelector('img');
+        this.titlespace = clone.querySelector('h5');
+        this.descriptionspace = clone.querySelector('p');
+        this.labelspace = clone.querySelector('.attribution-text');
+        
+        if (this.hasAttribute('img-src')) {var imgsrc = this.getAttribute('img-src');this.setImage(imgsrc);}
+        else { this.image.parentNode.removeChild(this.image); }
+        
+        if (this.querySelector('wiki-card-title')) {var title = this.querySelector('wiki-card-title');this.setTitle(title);}
+        else { this.titlespace.parentNode.removeChild(this.titlespace);}
+        if(this.querySelector('wiki-card-content')!=null){this.setDescription(this.querySelector('wiki-card-content').innerHTML)}
+        else{this.descriptionspace.parentNode.removeChild(this.descriptionspace);}
+        if(this.orientation == 'portrait')
+        if(this.querySelectorAll('a').length >0){ [].forEach.call(this.querySelectorAll('a'),function(e){
+            var a = document.createElement('a');
+                a.appendChild(document.createTextNode(e.textContent));
+                a.title = e.title;
+                a.href = e.href;
+                a.className = "btn btn-default btn-xs";
+                clone.querySelector(".card-footer").appendChild(a);
+        }); }else{
+            var c = clone.querySelector(".card-footer");
+            c.parentNode.removeChild(c);
+        }
+        if (this.querySelector('wiki-card-label')) {
+            var label = this.querySelector('wiki-card-label');
+            var labelicon = label.getAttribute('icon');
+           
+            if(labelicon){
+               
+                this.labelspace.innerHTML = "<svg class='icon "+labelicon+"n'><use xlink:href='MW/icons.svg#"+labelicon+"'></use></svg> "
+            }
+           this.setLabel(label);
+            }
+        else { this.labelspace.parentNode.removeChild(this.labelspace);}
+        while (this.firstChild) {this.removeChild(this.firstChild);}
+        this.appendChild(clone);
+    };
+    // MyElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+    //     if (attr === 'who') {
+    //         this.setWho(newVal);
+    //     }
+    // };
+    MyElementProto.setImage = function(val) { this.image.src = val;};
+    MyElementProto.setTitle = function(val) { this.titlespace.innerHTML = val.innerHTML;};
+    MyElementProto.setDescription = function(val) { this.descriptionspace.innerHTML = val;};
+    MyElementProto.setLabel = function(val) { this.labelspace.appendChild(document.createTextNode(val.innerHTML));};
+    thatDoc.registerElement('wiki-card', {prototype: MyElementProto});
+})(window, document);
+
+</script>
+<!-- CARD ELEMENT END -->
+<!-- BUTTON ELEMENT START -->
+<script>
+    (function(window, document, undefined) {
+    var thatDoc = document;
+    var MyElementProto = Object.create(HTMLButtonElement.prototype);
+    MyElementProto.__proto__ == HTMLButtonElement.prototype;
+    MyElementProto.createdCallback = function() {
+        if (this.hasAttribute('icon')) {this.innerHTML = '<svg class="icon '+this.getAttribute('icon')+'"><use xlink:href="MW/icons.svg#'+this.getAttribute('icon')+'"></use></svg>'+this.innerHTML}
+        this.buttonType = this.getAttribute('button-type')||'default';
+        this.buttonSize = this.getAttribute('button-size');
+        this.className = this.className + " btn btn-"+this.buttonType; 
+        if(this.buttonSize){
+            this.className = this.className +" "+'btn-'+this.buttonSize;
+        } 
+       
+        
+    };
+    
+    thatDoc.registerElement('wiki-button', {prototype: MyElementProto,extends: 'button'});
+})(window, document);
+
+</script>
+<!-- BUTTON ELEMENT END-->
+<!-- STAT ELEMENT START-->
+<template id="wikistattemplate">
+    <div class="panel panel-default">
+        <div class="card-body">
+            <h5 class="no-margin-bottom"></h5><small></small>
+            <div class="stat-text"></div>
+
+        </div>
+
+        <div class="card-footer-stat">
+        </div>
+
+        <div class="card-footer">
+            <svg class="icon wikiglyph-star">
+                <use xlink:href="MW/icons.svg#wikiglyph-star"></use>
+            </svg>Share
+        </div>
+    </div>
+</template>
+<script>
+    (function(window, document, undefined) {
+     var thatDoc = document;
+     var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+     var MyElementProto = Object.create(HTMLElement.prototype);
+     MyElementProto.createdCallback = function() {
+        var template = thisDoc.querySelector('#wikistattemplate').content;
+        var clone = thatDoc.importNode(template, true);
+        var div = clone.querySelector('div');
+        div.setAttribute('style',this.getAttribute('style'));
+        div.className = this.className+" "+div.className;
+        this.titlespace = clone.querySelector('h5');
+        if (this.hasAttribute('title')) {var title = this.getAttribute('title');this.setTitle(title);}
+        else { this.titlespace.parentNode.removeChild(this.titlespace);}
+        this.subtitlespace = clone.querySelector('small');
+        if (this.hasAttribute('sub-title')) {var subtitle = this.getAttribute('sub-title');this.setSubTitle(subtitle);}
+        else { this.subtitlespace.parentNode.removeChild(this.subtitlespace);}
+        var content = this.querySelector('wiki-stat-content');
+
+        if(content){clone.querySelector('.stat-text').innerHTML = content.innerHTML;}
+         if(this.querySelectorAll('a').length >0){ [].forEach.call(this.querySelectorAll('a'),function(e){
+            var a = document.createElement('a');
+                a.appendChild(document.createTextNode(e.textContent));
+                a.title = e.title;
+                a.href = e.href;
+                a.className = "btn btn-default btn-xs";
+                clone.querySelector(".card-footer-stat").appendChild(a);
+        }); }else{var lfooter = clone.querySelector(".card-footer-stat");lfooter.parentNode.removeChild(lfooter);}
+        var footer = this.querySelector('wiki-stat-footer');
+        this.footerSpace = clone.querySelector('.card-footer');
+        if(!footer){
+            this.footerSpace.parentNode.removeChild(this.footerSpace);
+        }else{
+            this.footerSpace.innerHTML = footer.innerHTML;
+        }
+        
+        while (this.firstChild) {this.removeChild(this.firstChild);}
+        this.appendChild(clone); 
+    };
+    MyElementProto.setTitle = function(val) { this.titlespace.innerHTML = val;};
+    MyElementProto.setSubTitle = function(val) { this.subtitlespace.innerHTML = val;};
+    thatDoc.registerElement('wiki-stat', {prototype: MyElementProto});
+})(window, document);
+
+</script>
+<!-- STAT ELEMENT END-->
+<!-- INFO PANEL START -->
+<template id="wikiinfopaneltemplate">
+    <div class="panel panel-default  no-gutter wiki-info-panel-wrapper">
+        <div class="panel-heading">
+            <h4 class="panel-title"></h4>
+        </div>
+        <img src="" class="img-responsive">
+
+        <table class="table">
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</template>
+<script>
+    (function(window, document, undefined) {
+     var thatDoc = document;
+     var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+     var MyElementProto = Object.create(HTMLElement.prototype);
+     MyElementProto.createdCallback = function() {
+        var template = thisDoc.querySelector('#wikiinfopaneltemplate').content;
+        var clone = thatDoc.importNode(template, true);
+        var div = clone.querySelector('div');
+        div.setAttribute('style',this.getAttribute('style'));
+        div.className = this.className+" "+div.className;
+        this.image = clone.querySelector('img');
+        if (this.hasAttribute('img-src')) {var imgsrc = this.getAttribute('img-src');this.setImage(imgsrc);}
+        else { this.image.parentNode.removeChild(this.image); }
+        this.titlespace = clone.querySelector('h4');
+        if (this.hasAttribute('title')) {var title = this.getAttribute('title');this.setTitle(title);}
+        else { this.titlespace.parentNode.removeChild(this.titlespace);}
+        var items = this.querySelectorAll('wiki-info-panel-content');
+        this.itemSpace = clone.querySelector('.table tbody');
+        var elem = this;
+        if(items){
+             [].forEach.call(items,function(e){
+                 var tr = document.createElement('tr');
+                 var th = document.createElement('th');
+                 th.className = "label-top";
+                 th.appendChild(document.createTextNode(e.getAttribute('title')));
+                 tr.appendChild(th);
+                 var td = document.createElement('td');
+                 td.className = "label-bottom";
+                 td.innerHTML = e.innerHTML;
+                 tr.appendChild(td);
+               elem.itemSpace.appendChild(tr);
+             });
+        }
+        while (this.firstChild) {this.removeChild(this.firstChild);}
+        this.appendChild(clone); 
+    };
+     MyElementProto.setTitle = function(val) { this.titlespace.innerHTML = val;};
+     MyElementProto.setImage = function(val) { this.image.src = val;};
+    thatDoc.registerElement('wiki-info-panel', {prototype: MyElementProto});
+})(window, document);
+
+</script>
+<!-- INFO PANEL END-->
+<!-- LIST START -->
+<template id="wikilisttemplate">
+    <div class="list-simple-group">
+        <!--<div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="list-thumbnail">
+                </a>
+            </div>
+            <div class="media-body">
+                <p class="list-secondary-text">DEC 2015</p>
+
+                <h4 class="media-heading">Title</h4>
+                <p>Description. Cat ipsum dolor sit amet, chase the pig around the house yet present belly, scratch hand when
+                    stroked for meow or stare at wall. </p>
+            </div>
+        </div>-->
+    </div>
+</template>
+<script>
+    (function(window, document, undefined) {
+     var thatDoc = document;
+     var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+     var MyElementProto = Object.create(HTMLElement.prototype);
+     MyElementProto.createdCallback = function() {
+        var template = thisDoc.querySelector('#wikilisttemplate').content;
+        var clone = thatDoc.importNode(template, true);
+        var div = clone.querySelector('div');
+        div.setAttribute('style',this.getAttribute('style'));
+        div.className = this.className+" "+div.className;
+
+        var items = this.querySelectorAll('wiki-list-item');
+        this.itemSpace = clone.querySelector('.list-simple-group');
+        var elem = this;
+        if(items){
+             [].forEach.call(items,function(e){
+                 var media = document.createElement('div');
+                 media.className = 'media';
+                 var medialeft = document.createElement('div');
+                 medialeft.className = "media-left";
+                 if(e.hasAttribute('img-src')){
+                 var a = document.createElement('a');
+                 a.href = e.getAttribute('href');
+                 var img = document.createElement('img');
+                 img.className = 'list-thumbnail';
+                 img.style.backgroundImage = "url('"+e.getAttribute('img-src')+"')";
+                 a.appendChild(img);
+                 medialeft.appendChild(a);
+                 }
+                 
+                 var mediabody = document.createElement('div');
+                 mediabody.className = 'media-body';
+                 var subtitleNode = e.querySelector('wiki-list-sub-title');
+                 if(subtitleNode){
+                     var subtitle = document.createElement('p');
+                     subtitle.className = "list-secondary-text";
+                     subtitle.innerHTML = subtitleNode.innerHTML;
+                     mediabody.appendChild(subtitle); 
+                     }
+                 var titleNode = e.querySelector('wiki-list-title');
+                 if(titleNode){
+                     var title = document.createElement('h4');
+                     title.className = "media-heading";
+                     title.innerHTML = titleNode.innerHTML;
+                     mediabody.appendChild(title); 
+                     }
+                 var contentNode = e.querySelector('wiki-list-content');
+                 if(contentNode){
+                     var content = document.createElement('p');
+                     content.innerHTML = contentNode.innerHTML;
+                     mediabody.appendChild(content); 
+                     }
+                     
+                 media.appendChild(medialeft);
+                 media.appendChild(mediabody);
+               elem.itemSpace.appendChild(media);
+             });
+        }
+        while (this.firstChild) {this.removeChild(this.firstChild);}
+        this.appendChild(clone); 
+    };
+     MyElementProto.setTitle = function(val) { this.titlespace.innerHTML = val;};
+     MyElementProto.setImage = function(val) { this.image.src = val;};
+    thatDoc.registerElement('wiki-list', {prototype: MyElementProto});
+})(window, document);
+
+</script>
+<!-- LIST END -->

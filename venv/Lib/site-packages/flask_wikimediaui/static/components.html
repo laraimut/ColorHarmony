@@ -1,0 +1,3874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mediawiki UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="MW/mediawiki.min.css">
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/docs.min.css">
+  <link rel="import" href="MW/elements.html">
+  <link rel="stylesheet" href="assets/prism.css">
+  <link rel="stylesheet" href="assets/snippet.css">
+</head>
+
+<style type="text/css">
+  body{
+    background-color: #f9f9f9;
+  }
+  h2.page-header {
+    padding-bottom: .2em;
+  }
+  pre{
+    border: none;
+  }
+  .language-markup {
+    font-size: 12px;
+  }
+  li a svg{
+    color: #165C91;
+    vertical-align: top;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  li a svg.icon{
+    vertical-align: top;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .title-section{
+    font-weight: bold;
+  }
+  .space-section{
+    margin-top: 50px;
+  }
+  .space-content{
+    margin-top: 20px;
+  }
+  div.padding-left-no > wiki-list > div > div > .media-left{
+    padding-right: 0;
+  }
+  .demo-icon{
+    display: table;
+  }
+  .demo-icon .icon{
+    margin-right: 1em;
+  }
+  .info-footer{
+    font-size: 12px;
+    color: #f9f9f9;
+    padding: 1em;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  .info-footer a{
+    color: #f9f9f9;
+    border-bottom: 1px dotted #f9f9f9;
+  }
+  footer{
+    background-color: #333;
+    bottom: 0;
+    display: block;
+    margin-top: 8em;
+    text-align: center;
+  }
+
+  .embed-container {
+   position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+ } 
+  .embed-container iframe, 
+  .embed-container object, 
+  .embed-container embed {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+ }
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+  <div class="container">
+    <div>
+      <div class="row col-md-12 space-section">
+        <h1 style="margin-bottom: 10px;">Wikimedia UI</h1>
+        <a href="http://wikimedia-ui.wmflabs.org"><wiki-icon color="#347bff" icon='arrow-left'></wiki-icon> Back to menu</a>
+      </div>
+
+
+                <!-- ----------------- 
+                  GETTING STARTED 
+                  ----------------- -->
+
+                  <div class="row col-md-12 space-section">
+                    <h2 id="step-one" class="page-header">
+                      <a href="#step-one" aria-label="Anchor link for: step one"></a>
+                      Getting started
+                    </h2>
+                    </div>
+
+                    <div class="row col-md-12 space-content">
+                    <div class="row col-md-12">
+                      <div class="row col-md-3 col-sm-12">
+                        <p class="title-section">
+                          Step one
+                        </p>
+                      </div>
+
+                      <div class="row col-md-9 col-sm-12">
+                        <a href="http://bit.ly/25JDM6d" class="btn btn-primary"><wiki-icon icon="download"></wiki-icon> Download a starter html</a><br><br>
+                        Then, open with <a href="http://www.sublimetext.com/2">Sublime code editor</a>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="row col-md-12 space-section">
+                    <div class="row col-md-12">
+                      <div class="row col-md-3 col-sm-12">
+                        <p class="title-section">
+                          Step two
+                        </p>
+                      </div>
+
+                      <div class="row col-md-9 col-sm-12">
+                      <div class="embed-container">
+                        <iframe src="https://www.youtube.com/embed/6IarBkQyrjE?modestbranding=1&autoplay=1&showinfo=0&fs=0&showinfo=0&loop=1&playlist=6IarBkQyrjE" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  
+
+
+
+                <!-- ----------------- 
+                  ICONS 
+                  ----------------- -->
+                  <div class="row col-md-12 space-content">
+                    <h2 id="icons" class="page-header">
+                      <a href="#icons" aria-label="Anchor link for: icons"></a>
+                      Iconography
+                    </h2>
+
+                    <div class="row col-md-12">
+                      <div class="row col-md-3 col-sm-12">
+                        <p class="title-section">
+                          Example
+                        </p>
+                      </div>
+
+
+                      <div class="row col-md-9 col-sm-12">
+                        <p>
+                          <code class='xicon-example-component' >&lt;wiki-icon icon="unstar"&gt;&lt;/wiki-icon&gt;</code> generates <span class='xicon-example'><wiki-icon icon="unstar"></wiki-icon></span>
+                        </p><br>
+                        <div class="row demo-icon">
+                          <ul class="container row nav nav-pills">
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="link chain"><wiki-icon icon="link"></wiki-icon>link</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="heart love thanks like appreciate"><wiki-icon icon="heart"></wiki-icon>heart</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="star watch follow watchlist subscribe tune in"><wiki-icon icon="star"></wiki-icon>star</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="unstar unwatch unfollow watchlist unsubscribe tune out"><wiki-icon icon="unstar"></wiki-icon>unstar</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="watchlist follow list list subscription starred list"><wiki-icon icon="watchlist"></wiki-icon>watchlist</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="sun help"><wiki-icon icon="sun"></wiki-icon>sun</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="funnel filter search"><wiki-icon icon="funnel"></wiki-icon>funnel</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="eye show reveal"><wiki-icon icon="eye"></wiki-icon>eye</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="closed eye unshow hide"><wiki-icon icon="eye-closed"></wiki-icon>eye-closed</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="printer print"><wiki-icon icon="printer"></wiki-icon>printer</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="puzzle contribution"><wiki-icon icon="puzzle"></wiki-icon>puzzle</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="clock time history"><wiki-icon icon="clock"></wiki-icon>clock</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="dice random"><wiki-icon icon="dice"></wiki-icon>dice</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="magnifying glass search filter"><wiki-icon icon="magnifying-glass"></wiki-icon>magnifying-glass</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="folder placeholder directory"><wiki-icon icon="folder-placeholder"></wiki-icon>folder-placeholder</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="log out logout sign out signout exit bye goodbye"><wiki-icon icon="log-out"></wiki-icon>log-out</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="article search within"><wiki-icon icon="article-search"></wiki-icon>article-search</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="side menu stripe hamburger sidebar"><wiki-icon icon="stripe-menu"></wiki-icon>stripe-menu</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="table of contents toc stripe"><wiki-icon icon="stripe-toc"></wiki-icon>stripe-toc</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="flow stripe details detailed expanded expanded expand full"><wiki-icon icon="stripe-flow"></wiki-icon>stripe-flow</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="view summary contract shrink collapsed compact"><wiki-icon icon="stripe-summary"></wiki-icon>stripe-summary</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="view details detailed list expanded expanded expand full"><wiki-icon icon="view-details"></wiki-icon>view-details</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="view compact image gallery"><wiki-icon icon="view-compact"></wiki-icon>view-compact</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="map places locate"><wiki-icon icon="map"></wiki-icon>map</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="map pin places locate geolocate"><wiki-icon icon="map-pin"></wiki-icon>map-pin</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="map pin places locate geolocate add location"><wiki-icon icon="map-pin-add"></wiki-icon>map-pin-add</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="beta new experimental"><wiki-icon icon="beta"></wiki-icon>beta</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="beta launch graduate new experimental"><wiki-icon icon="beta-launch"></wiki-icon>beta-launch</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="cog setting settings gear"><wiki-icon icon="cog"></wiki-icon>cog</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="appreciate ribbon prize win award grant reward"><wiki-icon icon="ribbon-prize"></wiki-icon>ribbon-prize</a></li>
+                            <li class="col-md-3 col-s-6"><a href="" search-terms="window new window external link"><wiki-icon icon="new-window"></wiki-icon>new-window</a></li>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <!-- Interface -->  
+                      <div class="row col-md-12 space-section">
+                        <div class="row col-md-3 col-sm-12">
+                          <p id="icons-interface" class="title-section">
+                            <a class="anchorjs-link" href="#icons-interface" aria-label="Anchor link for: interface icons"></a>
+                            Interface icons
+                          </p>
+                        </div>
+
+                        <div class="row col-md-9 col-sm-12">
+                          <div class="row demo-icon">
+                            <ul class="container row nav nav-pills">
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="ellipses options more menu drawer"><wiki-icon icon="ellipses"></wiki-icon>ellipses</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="clear input delete empty"><wiki-icon icon="close-input"></wiki-icon>close-input</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="cross cancel delete disappear"><wiki-icon icon="cross"></wiki-icon>cross</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="check done correct right"><wiki-icon icon="check"></wiki-icon>check</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="left arrow point direction"><wiki-icon icon="arrow-left"></wiki-icon>arrow-left</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="expand down arrow point direction triangle dropdown"><wiki-icon icon="triangle-down"></wiki-icon>triangle-down</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="caret expand down arrow point direction triangle dropdown"><wiki-icon icon="caret-down"></wiki-icon>caret-down</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="caret up arrow point direction dropdown collapse"><wiki-icon icon="caret-up"></wiki-icon>caret-up</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="left arrow point direction back previous caret"><wiki-icon icon="caret-left"></wiki-icon>caret-left</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="right arrow point direction forward next caret"><wiki-icon icon="caret-right"></wiki-icon>caret-right</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="add more additional plus step up stepper"><wiki-icon icon="plus"></wiki-icon>plus</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="minus subtract step down stepper"><wiki-icon icon="minus"></wiki-icon>minus</a></li>
+                              <li class="col-md-3 col-s-6"><a href="" search-terms="move resize reposition position"><wiki-icon icon="move"></wiki-icon>move</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        </div>
+
+
+                        <!-- Editing -->  
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-editing" class="title-section">
+                              <a class="anchorjs-link" href="#icons-editing" aria-label="Anchor link for: editing editor icons"></a>
+                              Editing icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="edit"></wiki-icon>edit</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="edit-lock"></wiki-icon>edit-lock</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="edit-undo"></wiki-icon>edit-undo</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="quotes"></wiki-icon>quotes</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="quotes-add"></wiki-icon>quotes-add</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="image-lock"></wiki-icon>image-lock</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="keyboard"></wiki-icon>keyboard</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="signature"></wiki-icon>signature</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="list-numbered"></wiki-icon>list-numbered</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="list-bullet"></wiki-icon>list-bullet</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="indent-left"></wiki-icon>indent-left</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="indent-right"></wiki-icon>indent-right</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="wikitext"></wiki-icon>wikitext</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="wikitext-no"></wiki-icon>wikitext-no</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="translation"></wiki-icon>translation</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="template-add"></wiki-icon>template-add</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Media -->
+
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-media" class="title-section">
+                              <a class="anchorjs-link" href="#icons-media" aria-label="Anchor link for: media icons"></a>
+                              Media icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="play"></wiki-icon>play</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="stop"></wiki-icon>stop</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="upload"></wiki-icon>upload</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="download"></wiki-icon>download</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="image"></wiki-icon>image</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="image-add"></wiki-icon>image-add</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="photo-gallery"></wiki-icon>photo-gallery</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- Messaging -->
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-messaging" class="title-section">
+                              <a class="anchorjs-link" href="#icons-messaging" aria-label="Anchor link for: messaging icons"></a>
+                              Messaging icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="message"></wiki-icon>message</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="bell"></wiki-icon>bell</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="bell-on"></wiki-icon>bell-on</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="speech-bubble"></wiki-icon>speech-bubble</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="speech-bubbles"></wiki-icon>speech-bubbles</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="user-talk"></wiki-icon>user-talk</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- References -->
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-references" class="title-section">
+                              <a class="anchorjs-link" href="#icons-references" aria-label="Anchor link for: references icons"></a>
+                              References icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="cite"></wiki-icon>cite</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="cite-article"></wiki-icon>cite-article</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="book"></wiki-icon>book</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="journal"></wiki-icon>journal</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="newspaper"></wiki-icon>newspaper</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="bookmark"></wiki-icon>bookmark</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="article"></wiki-icon>article</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="browser"></wiki-icon>browser</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <!-- Moderation -->
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-moderation" class="title-section">
+                              <a class="anchorjs-link" href="#icons-moderation" aria-label="Anchor link for: moderation icons"></a>
+                              Moderation icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="block"></wiki-icon>block</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="block-undo"></wiki-icon>block-undo</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="trash"></wiki-icon>trash</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="trash-undo"></wiki-icon>trash-undo</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="flag"></wiki-icon>flag</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="flag-undo"></wiki-icon>flag-undo</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="lock"></wiki-icon>lock</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="key"></wiki-icon>key</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="article-check"></wiki-icon>article-check</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- Users -->
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-user" class="title-section">
+                              <a class="anchorjs-link" href="#icons-user" aria-label="Anchor link for: user icons"></a>
+                              User icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="user-avatar"></wiki-icon>user-avatar</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="user-active"></wiki-icon>user-active</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="user-inactive"></wiki-icon>user-inactive</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <!-- Accessibility --> 
+                        <div class="row col-md-12 space-section">
+                          <div class="row col-md-3 col-sm-12">
+                            <p id="icons-accessibility" class="title-section">
+                              <a class="anchorjs-link" href="#icons-accessibility" aria-label="Anchor link for: accessibility icons"></a>
+                              Accessibility icons
+                            </p>
+                          </div>
+
+                          <div class="row col-md-9 col-sm-12">
+                            <div class="row demo-icon">
+                              <ul class="container row nav nav-pills">
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="bright-full"></wiki-icon>bright-full</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="sun-moon"></wiki-icon>sun-moon</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="full-moon"></wiki-icon>full-moon</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="moon"></wiki-icon>moon</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="large-text"></wiki-icon>large-text</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="smaller-text"></wiki-icon>smaller-text</a></li>
+                                <li class="col-md-3 col-s-6"><a href="" search-terms=""><wiki-icon icon="vision-simulator"></wiki-icon>vision-simulator</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+          <!-- ----------------- 
+                   LAYOUTS 
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                   <h2 id="layouts" class="page-header">
+                    <a class="anchorjs-link " href="#layouts" aria-label="Anchor link for: layouts"></a>
+                    Layouts
+                  </h2>
+                  </div>
+
+
+                  <!-- Layout 1 -->
+
+                  <!-- Layout 1- Title -->
+                  <div class="row col-md-3 col-sm-12">
+                    <p class="title-section">
+                      Layout 1
+                    </p>
+                  </div>
+
+                  <!-- Layout 1- Card 1 -->
+                  <div class="row col-md-9 col-sm-12">
+                    <div class="col-sm-12 col-sm-4">
+                      <wiki-card orientation="portrait" img-src="http://bit.ly/1G2ydaH">  
+                        <wiki-card-title>
+                          Mark Twain
+                        </wiki-card-title>
+                        <wiki-card-label icon='wikiglyph-public-domain'>
+                          Public domain - Mathew Brady via Wikimedia Commons
+                        </wiki-card-label>
+                        <wiki-card-content>
+                          February 7, 1871
+                        </wiki-card-content>
+                      </wiki-card>
+                    </div>
+
+                    <!-- Layout 1- Card 2 -->
+                    <div class="col-sm-12 col-sm-4">
+                      <wiki-card orientation="portrait" img-src="http://bit.ly/1RDV4dA">
+                        <wiki-card-title>
+                          Nikola Tesla
+                        </wiki-card-title>
+                        <wiki-card-label icon='wikiglyph-public-domain'>
+                          Public domain - Napoleon Sarony via Wikimedia Commons
+                        </wiki-card-label>
+                        <wiki-card-content>
+                          A photograph image of Nikola Tesla (1856-1943) at age 34.
+                        </wiki-card-content>
+                      </wiki-card>
+                    </div>
+
+                    <!-- Layout 1- Card 3 -->
+                    <div class="col-sm-12 col-sm-4">
+                      <wiki-card orientation="portrait" img-src="http://bit.ly/1Mo3Vvy">
+                        <wiki-card-title>
+                          Hypatia
+                        </wiki-card-title>
+                        <wiki-card-label icon='wikiglyph-public-domain'>
+                          Public domain - Hulton Archive/Getty Images via Wikimedia Commons
+                        </wiki-card-label>
+                        <wiki-card-content>
+                          An actress, possibly Mary Anderson, in the title role of the play Hypatia, circa 1900.
+                        </wiki-card-content>
+                      </wiki-card>
+                    </div>
+                  </div>
+
+
+
+
+                  <!-- CODE SNIPPET FOR LAYOUT 1 -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+
+                    <div class="col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup"> 
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+
+
+    &lt;!-- Card 1 --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1G2ydaH"&gt;  
+        &lt;wiki-card-title&gt;
+          Mark Twain
+        &lt;/wiki-card-title&gt;
+        &lt;wiki-card-label icon='wikiglyph-public-domain'&gt;
+          Public domain - Mathew Brady via Wikimedia Commons
+        &lt;/wiki-card-label&gt;
+        &lt;wiki-card-content&gt;
+          February 7, 1871
+        &lt;/wiki-card-content&gt;
+      &lt;/wiki-card&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Card 2 --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1RDV4dA"&gt;
+        &lt;wiki-card-title&gt;
+          Nikola Tesla
+        &lt;/wiki-card-title&gt;
+        &lt;wiki-card-label icon='wikiglyph-public-domain'&gt;
+          Public domain - Napoleon Sarony via Wikimedia Commons
+        &lt;/wiki-card-label&gt;
+        &lt;wiki-card-content&gt;
+          A photograph image of Nikola Tesla (1856-1943) at age 34.
+        &lt;/wiki-card-content&gt;
+      &lt;/wiki-card&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Card 3 --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1Mo3Vvy"&gt;
+        &lt;wiki-card-title&gt;
+          Hypatia
+        &lt;/wiki-card-title&gt;
+        &lt;wiki-card-label icon='wikiglyph-public-domain'&gt;
+          Public domain - Hulton Archive/Getty Images via Wikimedia Commons
+        &lt;/wiki-card-label&gt;
+        &lt;wiki-card-content&gt;
+          An actress, possibly Mary Anderson, in the title role of the play Hypatia, circa 1900.
+        &lt;/wiki-card-content&gt;
+      &lt;/wiki-card&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Layout 2 -->
+                    <div class="col-md-12 space-section">
+                    <div class="row center-block">
+                      <div class="row col-md-3 col-sm-12">
+                        <p class="title-section">
+                          Layout 2
+                        </p>
+                      </div>
+
+                      <div class="row col-md-9 col-sm-12">
+                        <div class="row col-md-12">
+                          <img style="margin-top: .5em; margin-bottom: 1.5em;" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Muybridge_race_horse_animated.gif" class="img-responsive" alt="Responsive image">
+                        </div>
+
+                        <!-- Layout 2- Image 1 -->
+                        <div class="row col-sm-12 col-sm-4">
+                          <h4 class="text-center">
+                            Lorem ipsum
+                          </h4>
+                          <p class="text-center">
+                            Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa.
+                          </p>
+                        </div>
+
+                        <!-- Layout 2- Image 2 -->
+                        <div class="col-sm-12 col-sm-4">
+                          <h4 class="text-center">
+                            Dolor sit amet
+                          </h4>
+                          <p class="text-center">
+                            Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa ut sem efficitur. Pellentesque pulvinar elit cursus.
+                          </p>
+                        </div>
+
+                        <!-- Layout 2- Image 3 -->
+                        <div class="col-sm-12 col-sm-4">
+                          <h4 class="text-center">
+                            Consectetur
+                          </h4>
+                          <p class="text-center">
+                            Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa ut sem efficitur.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+                    
+
+                  <!-- CODE SNIPPET FOR LAYOUT 2 -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup"> 
+&lt;div class="container"&gt;
+
+
+  &lt;!-- Image --&gt;
+  &lt;div class="row"&gt;
+
+    &lt;div class="col-md-12"&gt;
+      &lt;img src="http://bit.ly/22LnRCw" class="img-responsive" alt="Responsive image"&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+
+  &lt;!-- 3-column text --&gt;
+  &lt;div class="row"&gt;
+
+    &lt;div class="col-sm-2 col-md-4"&gt;
+      &lt;h4 class="text-center"&gt;Lorem ipsum&lt;/h4&gt;
+      &lt;p class="text-center"&gt;Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-12 col-md-4"&gt;
+      &lt;h4 class="text-center"&gt;Dolor sit amet&lt;/h4&gt;
+      &lt;p class="text-center"&gt;Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa ut sem efficitur. Pellentesque pulvinar elit cursus.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-12 col-md-4"&gt;
+      &lt;h4 class="text-center"&gt;Consectetur&lt;/h4&gt;
+      &lt;p class="text-center"&gt;Nunc sit amet purus ornare, egestas sapien id, cursus erat. Fusce ullamcorper massa ut sem efficitur.&lt;/p&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+                    <!-- Layout 3 -->
+                    <div class="row col-md-12 space-section">
+                      <div class="row col-md-3 col-sm-12">
+                        <p class="title-section">
+                          Layout 3
+                        </p>
+                      </div>
+
+                      <div class="row col-md-9 col-sm-12">
+
+                        <div class="col-sm-12 col-sm-4">
+                          <h5>Martin Luther King, Jr. and Coretta Scott King.</h5>
+                          Lorem ipsum dolor sit amet, consctetur adipiscing elit. Fusce mauris urna, vestibulum quis malesuada ac, imperdiet ut sem. Suspendisse semper diam non lacus convallis aliquet. Aliquam congue dui in nunc fringilla, ac porttitor dui lobortis. Donec eu pharetra quam, sit amet placerat ipsum. In tristique, augue vitae molestie gravida, dui metus consequat dui, vel luctus nisi quam in massa. Quisque euismod interdum diam eget feugiat. Mauris eu sagittis augue, in eleifend dolor. Nam ac magna sit amet ex pharetra tincidunt. Pellentesque lacinia felis at quam posuere bibendum. In elementum urna nisl, vestibulum molestie quam pharetra ac. Fusce egestas massa in tincidunt ullamcorper. Aenean orci leo, laoreet vitae felis et, interdum rutrum ipsum. Vestibulum quis ex diam.
+                        </div>
+
+                        <div class="col-sm-12 col-sm-4">
+                          <img style="margin-top: .5em; margin-bottom: 1.5em;" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Martin_Luther_King_Jr_NYWTS_5.jpg" class="img-responsive" alt="Responsive image">
+
+                          <small><abbr title="attribute">Author Herman Hiller (1964)</abbr></small><br><br>
+
+                          In a ligula sed ligula vestibulum ultricies ac quis turpis. Morbi dictum convallis convallis. Donec quis tellus in risus tristique pellentesque. Vivamus gravida sem nunc, quis vestibulum enim auctor non. Fusce bibendum enim sed tortor faucibus blandit. Ut in mauris cursus, imperdiet urna blandit, ullamcorper felis. Nulla tincidunt, erat at blandit rutrum, elit diam viverra metus, nec venenatis ligula turpis nec erat. 
+                        </div>
+
+                        <div class="col-sm-12 col-sm-4">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris urna, vestibulum quis malesuada ac, imperdiet ut sem. Suspendisse semper diam non lacus convallis aliquet. Aliquam congue dui in nunc fringilla, ac porttitor dui lobortis. Donec eu pharetra quam, sit amet placerat ipsum. In tristique, augue vitae molestie gravida, dui metus consequat dui, vel luctus nisi quam in massa. Quisque euismod interdum diam eget feugiat. Mauris eu sagittis augue, in eleifend dolor. Nam ac magna sit amet ex pharetra tincidunt. Pellentesque lacinia felis at quam posuere bibendum. In elementum urna nisl, vestibulum molestie quam pharetra ac. Fusce egestas massa in tincidunt ullamcorper. Aenean orci leo, laoreet vitae felis et, interdum rutrum ipsum. Vestibulum quis ex diam.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <!-- CODE SNIPPET FOR LAYOUT 3 -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup "> 
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+
+
+    &lt;!-- Left column text --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;h5&gt;Martin Luther King, Jr. and Coretta Scott King.&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consctetur adipiscing elit. Fusce mauris urna, vestibulum quis malesuada ac, imperdiet ut sem. Suspendisse semper diam non lacus convallis aliquet. Aliquam congue dui in nunc fringilla, ac porttitor dui lobortis. Donec eu pharetra quam, sit amet placerat ipsum. In tristique, augue vitae molestie gravida, dui metus consequat dui, vel luctus nisi quam in massa. Quisque euismod interdum diam eget feugiat. Mauris eu sagittis augue, in eleifend dolor. Nam ac magna sit amet ex pharetra tincidunt. Pellentesque lacinia felis at quam posuere bibendum. In elementum urna nisl, vestibulum molestie quam pharetra ac. Fusce egestas massa in tincidunt ullamcorper. Aenean orci leo, laoreet vitae felis et, interdum rutrum ipsum. Vestibulum quis ex diam.&lt;/p&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Center column --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;img src="http://bit.ly/1r9aA9h" class="img-responsive" alt="Responsive image"&gt; &lt;!-- Image --&gt;
+      &lt;small&gt;&lt;abbr title="attribute"&gt;Author Herman Hiller (1964)&lt;/abbr&gt;&lt;/small&gt; &lt;!-- Photo credit --&gt;
+      &lt;p&gt;In a ligula sed ligula vestibulum ultricies ac quis turpis. Morbi dictum convallis convallis. Donec quis tellus in risus tristique pellentesque. Vivamus gravida sem nunc, quis vestibulum enim auctor non. Fusce bibendum enim sed tortor faucibus blandit. Ut in mauris cursus, imperdiet urna blandit, ullamcorper felis. Nulla tincidunt, erat at blandit rutrum, elit diam viverra metus, nec venenatis ligula turpis nec erat.&lt;/p&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Left column text --&gt;
+    &lt;div class="col-sm-12 col-sm-4"&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris urna, vestibulum quis malesuada ac, imperdiet ut sem. Suspendisse semper diam non lacus convallis aliquet. Aliquam congue dui in nunc fringilla, ac porttitor dui lobortis. Donec eu pharetra quam, sit amet placerat ipsum. In tristique, augue vitae molestie gravida, dui metus consequat dui, vel luctus nisi quam in massa. Quisque euismod interdum diam eget feugiat. Mauris eu sagittis augue, in eleifend dolor. Nam ac magna sit amet ex pharetra tincidunt. Pellentesque lacinia felis at quam posuere bibendum. In elementum urna nisl, vestibulum molestie quam pharetra ac. Fusce egestas massa in tincidunt ullamcorper. Aenean orci leo, laoreet vitae felis et, interdum rutrum ipsum. Vestibulum quis ex diam.&lt;/p&gt;
+    &lt;/div&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+        <!-- ----------------- 
+               BUTTONS 
+               ----------------- -->
+
+               <div class="row col-md-12 space-section">
+                <h2 id="buttons" class="page-header">
+                  <a class="anchorjs-link " href="#button" aria-label="Anchor link for: buttons"></a>
+                  Buttons
+                </h2>
+
+
+                <div class="row col-md-12 space-content">
+                  <div class="row col-md-3 col-sm-12">
+                    <p class="title-section">
+                      Buttons
+                    </p>
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+                    <button is='wiki-Button' type="submit" button-type="default" button-size="sm">
+                      Extra-small button
+                    </button>
+
+                    <button is='wiki-Button' type="submit" button-type="primary" button-size="sm">
+                      Small button
+                    </button>
+
+                    <button is='wiki-Button' type="submit" button-type="success">
+                      Regular button
+                    </button>
+
+                    <button is='wiki-Button' type="submit" icon='wikiglyph-trash' button-type="danger" button-size="lg" >
+                      Large icon button
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- CODE SNIPPET FOR BUTTONS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;button is='wiki-Button' button-type="default" button-size="sm" type="submit" &gt;
+  Extra-small button
+&lt;/button&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;button is='wiki-Button' button-type="primary" button-size="sm" type="submit" &gt;
+  Small button
+&lt;/button&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;button is='wiki-Button' button-type="success" type="submit" &gt;
+  Regular button
+&lt;/button&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;button is='wiki-Button' icon='wikiglyph-trash' button-type="danger" button-size="lg" type="submit"&gt;
+  Large icon button
+&lt;/button&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+                <div class="row col-md-12 space-section">
+                  <div class="row col-md-3 col-sm-12">
+                    <p>
+                      Colors
+                    </p>
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+
+                   <p>
+                    Change button type within <code>button-type="..."</code><br>
+
+                    <ul>
+                      <li><code>default</code> white</li>
+                      <li><code>primary</code> blue</li>
+                      <li><code>success</code> green</li>
+                      <li><code>warning</code> orange</li>
+                      <li><code>danger</code> red</li>
+                    </ul>
+                  </p><br>
+                </div>
+              </div>
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p>
+                    Sizes
+                  </p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <p>
+                    Change the size within <code>button-size="..."</code><br>
+                    <ul>
+                      <li><code>sm</code> extra-small</li>
+                      <li><code>sm</code> small</li>
+                      <li><code>lg</code> large</li>
+                    </ul>
+                  </p><br>
+                </div>
+              </div>
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p>
+                    Add an icon
+                  </p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <p>
+                    Add <code>icon='wikiglyph-star'</code>
+                  </p><br>
+                </div>
+
+              </div>
+
+
+              <!-- ----------------- BUTTONS - Button group -->
+
+              <div class="row col-md-12 space-section">
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">
+                    Button groups
+                  </p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+
+                  <!-- EXAMPLE: numbers -->
+
+                  <div class="btn-toolbar">
+                    <div class="btn-group"> 
+                     <a href="#" class="btn btn-default">1</a> 
+                     <a href="#" class="btn btn-default">2</a>
+                     <a href="#" class="btn btn-default">3</a>
+                     <a href="#" class="btn btn-default">4</a>
+                   </div>
+                 </div><br>
+
+
+                 <!-- EXAMPLE: icons -->
+
+                 <div class="btn-toolbar">
+                  <div class="btn-group"> 
+
+                    <!-- First button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="stripe-flow"></wiki-icon>
+                    </a>
+
+                    <!-- Second button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="view-details"></wiki-icon>
+                    </a>
+
+                    <!-- Second button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="view-compact"></wiki-icon>
+                    </a>
+
+                  </div>
+                </div><br>
+
+
+                <!-- EXAMPLE: icons + text -->
+
+                <div class="btn-toolbar">
+                  <div class="btn-group"> 
+
+                    <!-- First button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="map-pin"></wiki-icon>
+                      Button 1
+                    </a>
+
+                    <!-- Second button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="block"></wiki-icon>
+                      Button 2
+                    </a>
+                  </div>
+                </div><br>
+
+
+                <!-- EXAMPLE: button + dropdown -->
+
+                <div class="btn-toolbar">
+                  <div class="btn-group"> 
+
+                    <!-- First button -->
+                    <a href="#" class="btn btn-default">
+                      <wiki-icon icon="edit"></wiki-icon>
+                      Button 1
+                    </a>
+
+                    <!-- Dropdown -->
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        A dropdown
+                        <wiki-icon icon="caret-down"></wiki-icon>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- CODE SNIPPET FOR BUTTON GROUPS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Text only --&gt;
+
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt; 
+   &lt;a href="#" class="btn btn-default"&gt;1&lt;/a&gt; 
+   &lt;a href="#" class="btn btn-default"&gt;2&lt;/a&gt;
+   &lt;a href="#" class="btn btn-default"&gt;3&lt;/a&gt;
+   &lt;a href="#" class="btn btn-default"&gt;4&lt;/a&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Icon only --&gt;
+
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt; 
+
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- First button --&gt;
+      &lt;wiki-icon icon="stripe-flow"&gt;&lt;/wiki-icon&gt;
+    &lt;/a&gt;
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- Second button --&gt;
+      &lt;wiki-icon icon="view-details"&gt;&lt;/wiki-icon&gt;
+    &lt;/a&gt;
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- Third button --&gt;
+      &lt;wiki-icon icon="view-compact"&gt;&lt;/wiki-icon&gt;
+    &lt;/a&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Labeled icon --&gt;
+
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt; 
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- First button --&gt;
+      &lt;wiki-icon icon="map-pin"&gt;&lt;/wiki-icon&gt;
+      Button 1
+    &lt;/a&gt;
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- Second button --&gt;
+      &lt;wiki-icon icon="block"&gt;&lt;/wiki-icon&gt;
+      Button 2
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- with dropdown --&gt;
+
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt; 
+
+    &lt;a href="#" class="btn btn-default"&gt; &lt;!-- First button --&gt;
+      &lt;wiki-icon icon="edit"&gt;&lt;/wiki-icon&gt;
+      Button 1
+    &lt;/a&gt;
+
+    &lt;div class="btn-group"&gt; &lt;!-- Second button with dropdown --&gt;
+      &lt;a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+        A dropdown
+        &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+      &lt;/a&gt;
+      &lt;ul class="dropdown-menu"&gt; &lt;!-- Dropdown menu --&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+            <!-- ----------------- BUTTONS - Sizes -->
+
+              <!-- <h3 id="button-sizes" class="page-header">
+                <a class="anchorjs-link " href="#button-sizes" aria-label="Anchor link for: button sizes"></a>
+                Button sizes
+              </h3>
+
+              <h4>Full-width buttons</h4>
+              <p>
+                Add <code>btn-block</code> See example below.
+              </p>
+
+              <iframe width="100%" height="300" src="//jsfiddle.net/violetto/p1ce3qsw/embedded/result,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe><br><br>
+
+
+              <h4>Full-width button group</h4>
+              <p>
+                Add <code>btn-group-justified</code> See example below
+              </p>
+
+              <iframe width="100%" height="300" src="//jsfiddle.net/violetto/up5wakh5/embedded/result,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe> -->
+
+
+
+
+
+
+
+
+
+        <!-- ----------------- 
+               DROPDOWN 
+               ----------------- -->
+
+               <div class="row col-md-12 space-section">
+                <h2 id="dropdowns" class="page-header">
+                  <a class="anchorjs-link " href="#dropdowns" aria-label="Anchor link for: dropdowns"></a>
+                  Dropdown
+                </h2>
+              </div>
+
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">Dropdowns</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <!-- EXAMPLE: Regular button, no separator -->
+
+                  <div class="btn-group">
+                    <a href="" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Button dropdown
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                      <li><a href="#">Option 4</a></li>
+                    </ul>
+                  </div>
+
+
+                  <!-- EXAMPLE: Primary button, with separator -->
+
+                  <div class="btn-group">
+                    <a href="" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                      Button dropdown
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Option 4</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- ----------------- DROPDOWNS + buttons -->
+
+              <div class="row col-md-12 space-content">
+
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">
+                    Button + Dropdown
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+
+                   <!-- EXAMPLE: Default dropdown -->
+
+                   <div class="btn-group">
+                    <button type="button" class="btn btn-default">Regular dropdown</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                      <li><a href="#">Option 4</a></li>
+                    </ul>
+                  </div>
+
+
+
+                  <!-- EXAMPLE: Primary dropdown -->
+
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Primary dropdown</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                      <li><a href="#">Option 4</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+
+                <!-- CODE SNIPPET FOR DROPDOWNS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Regular dropdown --&gt;
+
+&lt;div class="btn-group"&gt;
+
+  &lt;a href="" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+    Button dropdown
+    &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+  &lt;/a&gt;
+
+  &lt;ul class="dropdown-menu"&gt; &lt;!-- dropdown menu --&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Primary dropdown with menu separator --&gt;
+
+&lt;div class="btn-group"&gt;
+
+  &lt;a href="" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"&gt;
+    Button dropdown
+    &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+  &lt;/a&gt;
+
+  &lt;ul class="dropdown-menu"&gt; &lt;!-- dropdown menu --&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="separator" class="divider"&gt;&lt;/li&gt; &lt;!-- menu separator --&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Option 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+              <div class="row col-md-12 space-section">
+                <div class="row col-md-3 col-sm-12">
+                  <p>Add a divider</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <p>Add <code>&lt;li role="separator" class="divider"&gt;&lt;/li></code></p>
+                </div>
+              </div>
+              
+
+
+        <!-- -----------------
+            INPUT GROUPS
+            ----------------- -->
+
+            <div class="row col-md-12 space-section">
+
+              <h2 id="input-groups" class="page-header">
+                <a class="anchorjs-link " href="#input-groups" aria-label="Anchor link for: input groups"></a>
+                Form elements
+              </h2>
+            </div>
+
+            <div class="row col-md-12 space-content">
+
+              <div class="row col-md-3 col-sm-12">
+                <p class="title-section">Input groups</p>
+              </div>
+
+
+              <div class="row col-md-9 col-sm-12">
+
+                <!-- EXAMPLE: Icon + Text field -->
+
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">
+                    <wiki-icon icon="magnifying-glass"></wiki-icon>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Search Wikipedia" aria-describedby="basic-addon1">
+                </div><br>
+
+
+
+
+
+                <!-- EXAMPLE: Text field + Text -->
+
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Language code" aria-describedby="basic-addon2">
+                  <span class="input-group-addon" id="basic-addon2">wikipedia.org</span>
+                </div><br>
+
+
+
+
+
+                <!-- EXAMPLE: Icon + Text field + Text -->
+
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <span class="input-group-addon">.00</span>
+                </div><br>
+
+
+
+
+
+                <!-- EXAMPLE: Text field + Button -->
+
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Wikipedia">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                      Search
+                    </button>
+                  </span>
+                </div><br>
+
+
+                <!-- EXAMPLE: Icon button + Icon button + Text field -->
+
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" aria-label="Regular text size">
+                      <wiki-icon icon="large-text"></wiki-icon>
+                    </button>
+
+                    <button type="button" class="btn btn-default" aria-label="Small text size">    
+                      <wiki-icon icon="smaller-text"></wiki-icon>
+                    </button>
+                  </div>
+
+                  <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+                </div><br>
+
+
+
+
+                <!-- EXAMPLE: Text field + Icon button + Button -->
+
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" aria-label="Add image">
+                      <wiki-icon icon="image-add"></wiki-icon>
+                    </button>
+
+                    <button type="button" class="btn btn-success">
+                      Submit
+                    </button>
+                  </div>
+                </div><br>
+
+
+
+                <!-- EXAMPLE: Dropdown + Text field -->
+
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Search in Wikipedia 
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Wikimedia Commons</a></li>
+                      <li><a href="#">Wiktionary</a></li>
+                      <li><a href="#">Wikiquote</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">MediaWiki</a></li>
+                    </ul>
+
+                  </div>
+                  <input type="text" class="form-control" aria-label="...">
+                </div><br>
+
+
+
+                <!-- EXAMPLE: Text field + Dropdown -->
+
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="...">
+                  <div class="input-group-btn">
+
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown 
+                      <wiki-icon icon="caret-down"></wiki-icon>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="">Option 1</a></li>
+                      <li><a href="">Option 2</a></li>
+                      <li><a href="">Option 3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="">Option 4</a></li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+                <!-- CODE SNIPPET FOR INPUT GROUPS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Icon + text field --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;span class="input-group-addon" id="basic-addon1"&gt; &lt;!-- Icon --&gt;
+    &lt;wiki-icon icon="magnifying-glass"&gt;&lt;/wiki-icon&gt;
+  &lt;/span&gt;
+
+  &lt;input type="text" placeholder="Search Wikipedia" class="form-control" aria-describedby="..."&gt; &lt;!-- Text field --&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Text field + text --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;input type="text" class="form-control" placeholder="Language code" aria-describedby="..."&gt; &lt;!-- Text field --&gt;
+  &lt;span class="input-group-addon" id="basic-addon2"&gt;wikipedia.org&lt;/span&gt; &lt;!-- Text --&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- EXAMPLE: Icon + text field + text --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;span class="input-group-addon"&gt;$&lt;/span&gt; &lt;!-- Icon --&gt;
+  &lt;input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"&gt; &lt;!-- Text field --&gt;
+  &lt;span class="input-group-addon"&gt;.00&lt;/span&gt; &lt;!-- Text --&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Text field + button --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;input type="text" class="form-control" placeholder="Search Wikipedia"&gt; &lt;!-- Text field --&gt;
+
+  &lt;span class="input-group-btn"&gt;
+    &lt;button class="btn btn-primary" type="button"&gt; &lt;!-- Button --&gt;
+      Search
+    &lt;/button&gt;
+  &lt;/span&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Icon buttons + Text field --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;div class="input-group-btn"&gt;
+    &lt;button type="button" class="btn btn-default" aria-label="Regular text size"&gt; &lt;!-- Icon 1 --&gt;
+      &lt;wiki-icon icon="large-text"&gt;&lt;/wiki-icon&gt;
+    &lt;/button&gt;
+
+    &lt;button type="button" class="btn btn-default" aria-label="Small text size"&gt; &lt;!-- Icon 2 --&gt;
+      &lt;wiki-icon icon="smaller-text"&gt;&lt;/wiki-icon&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;input type="text" class="form-control" aria-label="..."&gt; &lt;!-- Text field --&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Text field + icon button + button --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;input type="text" class="form-control" aria-label="..."&gt; &lt;!-- Text field --&gt;
+
+  &lt;div class="input-group-btn"&gt;
+    &lt;button type="button" class="btn btn-default" aria-label="Add image"&gt; &lt;!-- Icon button --&gt;
+      &lt;wiki-icon icon="image-add"&gt;&lt;/wiki-icon&gt;
+    &lt;/button&gt;
+
+    &lt;button type="button" class="btn btn-success"&gt; &lt;!-- Button --&gt;
+      Submit
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Dropdown + text field --&gt;
+
+&lt;div class="input-group"&gt;
+  &lt;div class="input-group-btn"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt; &lt;!-- Dropdown --&gt;
+      Search in Wikipedia 
+      &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+    &lt;/button&gt;
+
+    &lt;ul class="dropdown-menu"&gt; &lt;!-- Dropdown menu --&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Wikimedia Commons&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Wiktionary&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Wikiquote&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;MediaWiki&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;input type="text" class="form-control" aria-label="..."&gt; &lt;!-- Text field --&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Text field + dropdown --&gt;
+
+&lt;div class="input-group"&gt;
+
+  &lt;input type="text" class="form-control" aria-label="..."&gt; &lt;!-- Text field --&gt;
+
+  &lt;div class="input-group-btn"&gt;
+
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+      Dropdown 
+      &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+    &lt;/button&gt;
+
+    &lt;ul class="dropdown-menu dropdown-menu-right"&gt; Dropdown menu
+      &lt;li&gt;&lt;a href=""&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    
+  &lt;/div&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+            <!-- ----------------- INPUT - sizes -->
+            <div class="row col-md-12 space-section">
+
+              <div class="row col-md-3 col-sm-12">
+                <p>Input sizes</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+                <p>
+                  The default size is regular. See example on how to change input sizes. 
+                  <ul>
+                    <li><code>btn-group-sm</code> small</li>
+                    <li><code>btn-group-lg</code> large</li>
+                  </ul>
+                </p>
+
+              </div>
+            </div>
+
+
+        <!-- -----------------
+            NAVIGATION BAR
+            ----------------- -->
+
+            <div class="row col-md-12 space-section">
+
+              <h2 id="navigation-bar" class="page-header">
+                <a class="anchorjs-link " href="#navigation-bar" aria-label="Anchor link for: navigation bar"></a>
+                Navigation bar
+              </h2>
+            </div>
+
+            <div class="row col-md-12 space-content">
+              <div class="row col-md-3 col-sm-12">
+                <p class="title-section">Light theme</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+                <nav class="navbar navbar-default">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Wikimedia</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+
+
+            <!--DARK THEME -->
+            <div class="row col-md-12 space-content">
+              <div class="row col-md-3 col-sm-12">
+                <p class="title-section">Dark theme</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+
+                <nav class="navbar navbar-inverse">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Wikimedia</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                  </div>
+                </nav>
+
+                <p>
+                  Replace <code>navbar-default</code> to <code>navbar-inverse</code>
+                </p>
+              </div>
+            </div>
+
+            <!-- CODE SNIPPET FOR NAVBAR -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Navigation bar --&gt;
+
+&lt;nav class="navbar navbar-default"&gt;
+
+  &lt;div class="navbar-header"&gt;
+
+    &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+      &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Wikimedia&lt;/a&gt; &lt;!-- Brand name --&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+
+    &lt;ul class="nav navbar-nav"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;!-- First link --&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt; &lt;!-- Second link --&gt;
+      &lt;li class="dropdown"&gt; &lt;!-- Dropdown --&gt;
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt; &lt;!-- Dropdown menu --&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Dark theme navigation bar --&gt;
+
+&lt;nav class="navbar navbar-default"&gt;
+
+  &lt;div class="navbar-header"&gt;
+
+    &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+      &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Wikimedia&lt;/a&gt; &lt;!-- Brand name --&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+
+    &lt;ul class="nav navbar-nav"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;!-- First link --&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt; &lt;!-- Second link --&gt;
+      &lt;li class="dropdown"&gt; &lt;!-- Dropdown --&gt;
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt; &lt;!-- Dropdown menu --&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+            <!-- TOOLBAR w LINKS -->
+
+            <div class="row col-md-12 space-section">
+              <div class="row col-md-3 col-sm-12">
+                <p class="title-section">Navigation bar with links</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+                <nav class="navbar navbar-default">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" style="color: #347bff" href="">Wikimedia</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <p class="navbar-text navbar-right">
+                      <a href="" class="navbar-link">
+                        <wiki-icon icon="user-avatar">     </wiki-icon>
+                        Violetto  
+                      </a>
+                      <a href="" class="navbar-link">
+                        Talk page
+                      </a>
+
+                      <a href="" class="navbar-link">
+                        Contributions
+                      </a>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+                <!-- CODE SNIPPET FOR NAVBAR LINKS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup"> 
+&lt;nav class="navbar navbar-default"&gt;
+
+  &lt;div class="navbar-header"&gt;
+    &lt;a class="navbar-brand" href=""&gt;Wikimedia&lt;/a&gt; &lt;!-- Brand name --&gt;
+  &lt;/div&gt;
+
+  &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+    &lt;p class="navbar-text navbar-right"&gt;
+
+      &lt;a href="" class="navbar-link"&gt;
+        &lt;wiki-icon icon="user-avatar"&gt;&lt;/wiki-icon&gt; &lt;!-- Link 1 icon --&gt;
+        Violetto &lt;!-- Link 1 --&gt;
+      &lt;/a&gt;
+      &lt;a href="" class="navbar-link"&gt;
+        Talk page &lt;!-- Link 2 --&gt;
+      &lt;/a&gt;
+      &lt;a href="" class="navbar-link"&gt;
+        Contributions &lt;!-- Link 3 --&gt;
+      &lt;/a&gt;
+
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+            <!-- ----------------- NAVIGATION - tabs -->
+            <div class="row col-md-12 space-section">
+              <h2 id="tabs" class="page-header">
+                Tabs
+              </h2>
+            </div>
+
+            <div class="row col-md-12 space-content">
+              <div class="row col-md-3 col-sm-12">
+                <p id="tabs" class="title-section">
+                  <a class="anchorjs-link " href="#tabs" aria-label="Anchor link for: tabs"></a>
+                  Basic tabs
+                </p>
+              </div>
+
+
+              <div class="row col-md-9 col-sm-12">
+
+                <!-- EXAMPLE: Basic -->
+
+                <ul class="nav nav-tabs">
+                  <li role="presentation" class="active">
+                    <a href="#">Tab 1</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#">Tab 2</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#">Tab 3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+
+            <!-- EXAMPLE: with dropdown -->
+
+            <div class="row col-md-12 space-content">
+              <div class="row col-md-3 col-sm-12">
+                <p class="title-section">Tabs with dropdown</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+                <ul class="nav nav-tabs">
+
+                  <li role="presentation" class="active">
+                    <a href="">Tab 1</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="">Tab 2</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="">Tab 3</a>
+                  </li>
+
+                  <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                      Dropdown <wiki-icon icon='caret-down'></wiki-icon>
+                      </a>
+
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+                  <!-- CODE SNIPPET FOR TABS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic tabs --&gt;
+
+&lt;ul class="nav nav-tabs"&gt;
+
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href="#"&gt;Tab 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Tab 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Tab 3&lt;/a&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Tabs with dropdown --&gt;
+
+&lt;ul class="nav nav-tabs"&gt;
+
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href=""&gt;Tab 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Tab 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Tab 3&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li role="presentation" class="dropdown"&gt;
+    &lt;a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+      Dropdown &lt;wiki-icon icon='caret-down'&gt;&lt;/wiki-icon&gt; 
+    &lt;/a&gt;
+
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+              <!-- ----------------- NAVIGATION - pills -->
+
+              <div class="row col-md-12 space-section">
+                <h2 id="pills" class="page-header">
+                  <a class="anchorjs-link " href="#pills" aria-label="Anchor link for: pills"></a>
+                  Pills
+                </h2>
+              </div>
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p id="pills" class="title-section">
+                    Basic pills
+                  </p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+
+                  <!-- EXAMPLE: Basic -->
+
+                  <ul class="nav nav-pills">
+                    <li role="presentation" class="active">
+                      <a href="">Pill 1</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 2</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 3</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#">Pill 4</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">Pills with dropdown</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+
+                  <!-- EXAMPLE: with dropdown -->
+
+                  <ul class="nav nav-pills">
+
+                    <!-- Pills 1-4 -->
+                    <li role="presentation" class="active">
+                      <a href="">Pill 1</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 2</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 3</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#">Pill 4</a>
+                    </li>
+
+                    <!-- dropdown -->
+                    <li role="presentation" class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Dropdown 
+                        <wiki-icon icon="caret-down"></wiki-icon>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="">Option 1</a></li>
+                        <li><a href="">Option 2</a></li>
+                        <li><a href="">Option 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+              <!-- ----------------- NAVIGATION - sizes -->
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  Full-width pills
+                </div>
+
+
+                <div class="row col-md-9 col-sm-12">
+
+                  <!-- EXAMPLE: Basic full-width -->
+
+                  <ul class="nav nav-pills nav-justified">
+
+                    <li role="presentation" class="active">
+                      <a href="">Pill 1</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 2</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="">Pill 3</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#">Pill 4</a>
+                    </li>
+
+                  </ul>
+                  <br>
+                  <p>Add <code>nav-justified</code></p>
+
+                </div>
+              </div>
+
+
+
+
+
+                                <!-- CODE SNIPPET FOR PILLS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic pills --&gt;
+
+&lt;ul class="nav nav-pills"&gt;
+
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href=""&gt;Pill 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Pill 4&lt;/a&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Pills with dropdown --&gt;
+
+&lt;ul class="nav nav-pills"&gt;
+
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href=""&gt;Pill 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Pill 4&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li role="presentation" class="dropdown"&gt;
+    &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+      Dropdown &lt;wiki-icon icon="caret-down"&gt;&lt;/wiki-icon&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Option 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic pills --&gt;
+
+&lt;ul class="nav nav-pills nav-justified"&gt;
+
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href=""&gt;Pill 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href=""&gt;Pill 3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Pill 4&lt;/a&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+        <!-- ----------------- 
+                   BREADCRUMB 
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="breadcrumb" class="page-header">
+                      <a class="anchorjs-link " href="#breadcrumb" aria-label="Anchor link for: breadcrumb"></a>
+                      Breadcrumb
+                    </h2>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Basic breadcrumb</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <ol class="breadcrumb">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Library</a></li>
+                        <li class="active">Data</li>
+                      </ol>
+                    </div>
+                  </div>
+
+
+                <!-- CODE SNIPPET FOR BREADCRUMB -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;ol class="breadcrumb"&gt;
+
+  &lt;li&gt;&lt;a href=""&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+  
+&lt;/ol&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+        <!-- ----------------- 
+                   PAGINATION - numbered
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="pagination" class="page-header">
+                      <a class="anchorjs-link " href="#pagination" aria-label="Anchor link for: pagination"></a>
+                      Pagination
+                    </h2>
+                  </div>
+
+
+                  <div class="row col-md-3 col-sm-12">
+                    <p class="title-section">Basic pagination</p>
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+                    <nav>
+                      <ul class="pagination">
+                        <li>
+                          <li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                          </li>
+                        </li>
+
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+
+
+<!-- CODE SNIPPET FOR PAGINATION -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;nav&gt;
+  &lt;ul class="pagination"&gt;
+
+    &lt;li&gt;
+      &lt;li class="disabled"&gt;&lt;a href="" aria-label="Previous"&gt;&lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;!-- Disabled previous button --&gt;
+    &lt;/li&gt;
+
+    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt; &lt;!-- Currently selected page --&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href="#" aria-label="Next"&gt;&lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;!-- Next button --&gt;
+
+  &lt;/ul&gt;
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+        <!-- ----------------- 
+                   PAGINATION - Pagers
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Pager</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+
+                      <!-- basic pagers -->
+                      <nav>
+                        <ul class="pager">
+                          <li><a href="">Previous</a></li>
+                          <li><a href="">Next</a></li>
+                        </ul>
+                      </nav>
+
+                    </div>
+                  </div>
+
+
+
+        <!-- ----------------- 
+                   PAGINATION - edge
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Edge pagers</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+
+                      <!-- edge pagers -->
+                      <nav>
+                        <ul class="pager">
+                          <li class="previous disabled"><a href=""><span aria-hidden="true">&larr;</span> Older</a></li> <!-- disabled -->
+                          <li class="next"><a href="">Newer <span aria-hidden="true">&rarr;</span></a></li> 
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+
+
+<!-- CODE SNIPPET FOR PAGER -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                                            <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Pager pagers --&gt;
+&lt;nav&gt;
+  &lt;ul class="pager"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Previous&lt;/a&gt;&lt;/li&gt; 
+    &lt;li&gt;&lt;a href=""&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Edge pagers --&gt;
+&lt;nav&gt;
+  &lt;ul class="pager"&gt;
+    &lt;li class="previous disabled"&gt;&lt;a href=""&gt;&lt;span aria-hidden="true"&gt;&larr;&lt;/span&gt; Older&lt;/a&gt;&lt;/li&gt; &lt;!-- Disabled older button --&gt;
+    &lt;li class="next"&gt;&lt;a href=""&gt;Newer &lt;span aria-hidden="true"&gt;&rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 
+  &lt;/ul&gt;
+&lt;/nav&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                      </div>
+                    </div
+
+
+
+
+        <!-- ----------------- 
+               BADGES 
+               ----------------- -->
+
+               <div class="row col-md-12 space-section">
+                <h2 id="dropdowns" class="page-header">
+                  <a class="anchorjs-link " href="#badges" aria-label="Anchor link for: badges"></a>
+                  Badges
+                </h2>
+              </div>
+
+
+              <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">Badge with pill navigation</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <!-- badges on pills -->
+                  <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active">
+                      <a href="#">Home <span class="badge">42</span></a>
+                    </li>
+
+                    <li role="presentation">
+                      <a href="#">Profile</a>
+                    </li>
+
+                    <li role="presentation">
+                      <a href="#">Messages <span class="badge">3</span></a>
+                    </li>
+                  </ul>
+                </div>
+
+
+              <div class="row col-md-12 space-section">
+                <div class="row col-md-3 col-sm-12">
+                  <p class="title-section">Badge with a link</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <!-- badges with links -->
+                  <a href="">Inbox <span class="badge">42</span></a><br><br>
+                  <p>Insert <code>&lt;span class="badge"&gt;...&lt;/span&gt;</code> within <code>&lt;a&gt;&lt;/a&gt;</code>
+                </div>
+              </div>
+              </div>
+
+
+                <!-- CODE SNIPPET FOR BADGES -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- badges with pill navigation --&gt;
+
+&lt;ul class="nav nav-pills" role="tablist"&gt;
+  &lt;li role="presentation" class="active"&gt;
+    &lt;a href="#"&gt;Home &lt;span class="badge"&gt;42&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Profile&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li role="presentation"&gt;
+    &lt;a href="#"&gt;Messages &lt;span class="badge"&gt;3&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- badges with link --&gt;
+
+&lt;a href=""&gt;Inbox &lt;span class="badge"&gt;42&lt;/span&gt;&lt;/a&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+        <!-- ----------------- 
+                   LISTS 
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                     <h2 id="lists" class="page-header">
+                      <a class="anchorjs-link " href="#lists" aria-label="Anchor link for: lists"></a>
+                      Lists
+                    </h2>
+                  </div>
+
+                  <!-- DEMO START -->
+
+                  <div class='row col-md-12 space-content'>
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Basic list</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+
+                      <!-- EXAMPLE: Basic list -->
+                      <div class='row col-md-6 col-sm-12 padding-left-no'> 
+                        <wiki-list>
+
+                          <!-- First list item -->
+                          <wiki-list-item>
+                            <wiki-list-title> 
+                              Title 1
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 1
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+
+                          <!-- Second list item -->
+                          <wiki-list-item>
+                            <wiki-list-title> 
+                              Title 2
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 2
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+
+                          <!-- Third list item -->
+                          <wiki-list-item>
+                            <wiki-list-title> 
+                              Title 3
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 3
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+
+                          <!-- Fourth list item -->
+                          <wiki-list-item>
+                            <wiki-list-title> 
+                              Title 4
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 3
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                        </wiki-list>
+                      </div>
+
+
+
+                      <!-- EXAMPLE: List with more information -->
+                      <div class='col-md-6 col-sm-12 padding-left-no'> 
+                        <wiki-list>
+
+                          <!-- First list item -->
+                          <wiki-list-item>
+                            <wiki-list-sub-title>
+                              OCT 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 1
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 1
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+
+                          <!-- Second list item -->
+                          <wiki-list-item>
+                            <wiki-list-sub-title>
+                              NOV 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 2
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 2
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+
+                          <!-- Third list item -->
+                          <wiki-list-item>
+                            <wiki-list-sub-title>
+                              DEC 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 3
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Description or secondary information for Title 3
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                        </wiki-list>
+                      </div>
+
+                    </div>
+                  </div>
+
+                <!-- CODE SNIPPET FOR BASIC LISTS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic list --&gt;
+
+&lt;wiki-list&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-title&gt; Title 1 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 1 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-title&gt; Title 2 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 2&lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-title&gt; Title 3 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 3 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-title&gt; Title 4 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 3 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+&lt;/wiki-list&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic list 2 --&gt;
+
+&lt;wiki-list&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-sub-title&gt; OCT 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 1 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 1 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-sub-title&gt; NOV 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 2 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 2 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item&gt;
+    &lt;wiki-list-sub-title&gt; DEC 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 3 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Description or secondary information for Title 3 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+&lt;/wiki-list&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+                  <div class='row col-md-12 space-section'>
+                    <div class="row col-md-3 col-sm-12">
+                      List content
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      Title<br><code>&lt;wiki-list-title&gt;...&lt;/wiki-list-title&gt;</code><br>
+                      Sub-title<br><code>&lt;wiki-list-sub-title&gt;...&lt;/wiki-list-sub-title&gt;</code><br>
+                      Content<br><code>&lt;wiki-list-content&gt;...&lt;/wiki-list-content&gt;</code><br>
+                    </div>
+                  </div>
+
+
+                  <div class='row col-md-12 space-content'>
+                    <div class="row col-md-3 col-sm-12">
+                      Add image 
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <p>
+                        Add <code>img-src="..."</code> to <code>&lt;wiki-list-item img-src="..."&gt;</code><br>
+                      </p> <br>
+                    </div>
+                  </div>
+
+
+
+
+
+
+                  <div class='row col-md-12 space-section'>
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Complex list</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <!-- EXAMPLE: Basic list with image -->
+
+                      <div class="row col-md-6 col-sm-12">
+                        <wiki-list>
+
+                          <!-- First list item -->
+                          <wiki-list-item img-src="https://upload.wikimedia.org/wikipedia/commons/a/af/Portraiture_for_a_cloven_lip_Wellcome_L0016286.jpg">
+                            <wiki-list-content>
+                              Image label
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                          <!-- Second list item -->
+                          <wiki-list-item img-src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Ada_Lovelace_portrait_circa_1840.jpg">
+                            <wiki-list-content>
+                              Image label 2
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                          <!-- Third list item -->
+                          <wiki-list-item img-src="https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Qing_Dynasty_Consort_Yehonara.JPG">
+                            <wiki-list-content>
+                              Image label 3
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                          <!-- Fourth list item -->
+                          <wiki-list-item img-src="https://upload.wikimedia.org/wikipedia/commons/5/5a/The_Birth_of_Venus_%28Botticelli%29_detail.jpg">
+                            <wiki-list-content>
+                              Image label 4
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                        </wiki-list>
+                      </div>
+
+
+                      <div class="col-md-6 col-sm-12">
+                        <wiki-list>
+                          <!-- First list item -->
+                          <wiki-list-item href="#" img-src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Example_of_Portraiture_%283052226158%29.jpg">
+                            <wiki-list-sub-title>
+                              OCT 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 1
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor felis vitae elit rutrum, eget mollis risus laoreet. 
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                          <!-- Second list item -->
+                          <wiki-list-item href="#" img-src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Fayum-04.jpg">
+                            <wiki-list-sub-title>
+                              NOV 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 2
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Cras augue sem, lacinia sit amet sem eu, vehicula fringilla mi. Aenean tincidunt cursus lacinia. Mauris consectetur lectus id erat lacinia, at volutpat purus congue.
+                            </wiki-list-content>
+                          </wiki-list-item>
+
+                          <!-- Third list item -->
+                          <wiki-list-item href="#" img-src="https://upload.wikimedia.org/wikipedia/commons/7/78/Botticelli_Birth_of_Venus_detail_Flora.JPG">
+                            <wiki-list-sub-title>
+                              DEC 2015
+                            </wiki-list-sub-title>
+                            <wiki-list-title> 
+                              Title 3
+                            </wiki-list-title>
+                            <wiki-list-content>
+                              Nullam nec egestas massa. Vivamus egestas dictum efficitur. Mauris eu nisi auctor, facilisis magna nec, maximus ipsum. In rutrum auctor venenatis.
+                            </wiki-list-content>
+                          </wiki-list-item>
+                        </wiki-list>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                <!-- CODE SNIPPET FOR COMPLEX LISTS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Complex list --&gt;
+&lt;wiki-list&gt;
+
+  &lt;wiki-list-item img-src="http://bit.ly/212gvt9"&gt; &lt;!-- Image link --&gt;
+    &lt;wiki-list-content&gt; Image label &lt;/wiki-list-content&gt; &lt;!-- List item 1 --&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item img-src="http://bit.ly/1U8BoC4"&gt; 
+    &lt;wiki-list-content&gt; Image label 2&lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item img-src="http://bit.ly/1UlMb86"&gt;
+    &lt;wiki-list-content&gt; Image label 3 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item img-src="http://bit.ly/1U8B3Q2"&gt;
+    &lt;wiki-list-content&gt; Image label 4 &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+&lt;/wiki-list&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Complex list 2 --&gt;
+&lt;wiki-list&gt;
+
+  &lt;wiki-list-item href="#" img-src="http://bit.ly/1UCsKdW"&gt; &lt;!-- Image link --&gt;
+    &lt;wiki-list-sub-title&gt; OCT 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 1 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor felis vitae elit rutrum, eget mollis risus laoreet. &lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item href="#" img-src="http://bit.ly/1r9pb4z"&gt;
+    &lt;wiki-list-sub-title&gt; NOV 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 2 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Cras augue sem, lacinia sit amet sem eu, vehicula fringilla mi. Aenean tincidunt cursus lacinia. Mauris consectetur lectus id erat lacinia, at volutpat purus congue.&lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+  &lt;wiki-list-item href="#" img-src="http://bit.ly/1ZqDFsF"&gt;
+    &lt;wiki-list-sub-title&gt; DEC 2015 &lt;/wiki-list-sub-title&gt;
+    &lt;wiki-list-title&gt; Title 3 &lt;/wiki-list-title&gt;
+    &lt;wiki-list-content&gt; Nullam nec egestas massa. Vivamus egestas dictum efficitur. Mauris eu nisi auctor, facilisis magna nec, maximus ipsum. In rutrum auctor venenatis.&lt;/wiki-list-content&gt;
+  &lt;/wiki-list-item&gt;
+
+&lt;/wiki-list&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Button list</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+
+                      <!-- Button list -->
+                      <div class="list-group">
+                        <button type="button" class="list-group-item">
+                          Cras justo odio</button>
+                          <button type="button" class="list-group-item">
+                            Dapibus ac facilisis in</button>
+                            <button type="button" class="list-group-item">
+                              Morbi leo risus</button>
+                              <button type="button" class="list-group-item">
+                                Porta ac consectetur ac</button>
+                                <button type="button" class="list-group-item">
+                                  Vestibulum at eros</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row col-md-12 space-content">
+                              <div class="row col-md-3 col-sm-12">
+                                <p class="title-section">Button list with badges</p>
+                              </div>
+
+                              <div class="row col-md-9 col-sm-12">
+
+
+                                <!-- Button list with badges -->
+                                <ul class="list-group">
+                                  <li class="list-group-item">
+                                    <span class="badge">14</span>
+                                    Cras justo odio
+                                  </li>
+                                  <li class="list-group-item">
+                                    <span class="badge">1</span>
+                                    Morbi leo risus
+                                  </li>
+                                  <li class="list-group-item">
+                                    <span class="badge">100</span>
+                                    Vestibulum at eros
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+
+                <!-- CODE SNIPPET FOR COMPLEX LISTS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Button list --&gt;
+&lt;div class="list-group"&gt;
+
+  &lt;button type="button" class="list-group-item"&gt; Cras justo odio &lt;/button&gt;
+  &lt;button type="button" class="list-group-item"&gt; Dapibus ac facilisis in &lt;/button&gt;
+  &lt;button type="button" class="list-group-item"&gt; Morbi leo risus &lt;/button&gt;
+  &lt;button type="button" class="list-group-item"&gt; Porta ac consectetur ac &lt;/button&gt;
+  &lt;button type="button" class="list-group-item"&gt; Vestibulum at eros &lt;/button&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Button list with badges --&gt;
+&lt;ul class="list-group"&gt;
+
+  &lt;li class="list-group-item"&gt;
+    &lt;span class="badge"&gt;14&lt;/span&gt;
+    Cras justo odio
+  &lt;/li&gt;
+
+  &lt;li class="list-group-item"&gt;
+    &lt;span class="badge"&gt;1&lt;/span&gt;
+    Morbi leo risus
+  &lt;/li&gt;
+
+  &lt;li class="list-group-item"&gt;
+    &lt;span class="badge"&gt;100&lt;/span&gt;
+    Vestibulum at eros
+  &lt;/li&gt;
+
+&lt;/ul&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+
+        <!-- ----------------- 
+                   PANELS 
+                   ----------------- -->
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="panels" class="page-header">
+                      <a class="anchorjs-link " href="#panels" aria-label="Anchor link for: panels"></a>
+                      Panels
+                    </h2>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Simple panel</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <!-- EXAMPLE: Basic panel -->
+                      <div class='row col-sm-12 col-md-6'> 
+                        <wiki-info-panel title="Mahatma Gandhi">
+
+                          <wiki-info-panel-content title="Known for">
+                            Leadership of Indian independence movement, philosophy of Satyagraha, Ahimsa or nonviolence, pacifism
+                          </wiki-info-panel-content>
+
+                          <wiki-info-panel-content title="Alma mater">
+                            Alfred High School, Rajkot, Samaldas College, Bhavnagar, University College, London (UCL)
+                          </wiki-info-panel-content>
+
+                          <wiki-info-panel-content title="Movement">
+                            Indian National Congress
+                          </wiki-info-panel-content>
+
+                        </wiki-info-panel>   
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Panel with image</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+
+                      <div class='row col-sm-12 col-md-6'> 
+                        <wiki-info-panel title="Mahatma Gandhi" img-src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg">
+
+                          <wiki-info-panel-content title="Other names">
+                            Mahatma Gandhi, Bapu, Gandhiji
+                          </wiki-info-panel-content>
+
+                          <wiki-info-panel-content title="Ethnicity">
+                            Gujarati
+                          </wiki-info-panel-content>
+
+                          <wiki-info-panel-content title="Resting place">
+                            Cremated at Rajghat, Delhi 28.6415°N 77.2483°E
+                          </wiki-info-panel-content>
+
+                          <wiki-info-panel-content title="Signature">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Mohandas_K._Gandhi_signature.svg" class="img-responsive">
+                          </wiki-info-panel-content>
+                        </wiki-info-panel>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                                  <!-- CODE SNIPPET FOR PANELS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic panel --&gt;
+&lt;div class='col-sm-12 col-md-6'&gt; 
+  &lt;wiki-info-panel title="Mahatma Gandhi"&gt;
+
+    &lt;wiki-info-panel-content title="Known for"&gt; Leadership of Indian independence movement, philosophy of Satyagraha, Ahimsa or nonviolence, pacifism&lt;/wiki-info-panel-content&gt;
+    &lt;wiki-info-panel-content title="Alma mater"&gt; Alfred High School, Rajkot, Samaldas College, Bhavnagar, University College, London (UCL) &lt;/wiki-info-panel-content&gt;
+    &lt;wiki-info-panel-content title="Movement"&gt; Indian National Congress &lt;/wiki-info-panel-content&gt;
+
+  &lt;/wiki-info-panel&gt;   
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic panel --&gt;
+&lt;div class='col-sm-12 col-md-6'&gt; 
+  &lt;wiki-info-panel title="Mahatma Gandhi" img-src="http://bit.ly/1TshXjd"&gt;
+
+    &lt;wiki-info-panel-content title="Other names"&gt; Mahatma Gandhi, Bapu, Gandhiji &lt;/wiki-info-panel-content&gt;
+    &lt;wiki-info-panel-content title="Ethnicity"&gt; Gujarati &lt;/wiki-info-panel-content&gt;
+    &lt;wiki-info-panel-content title="Resting place"&gt; Cremated at Rajghat, Delhi 28.6415°N 77.2483°E &lt;/wiki-info-panel-content&gt;
+    &lt;wiki-info-panel-content title="Signature"&gt; &lt;img src="http://bit.ly/1WT0aH6" class="img-responsive"&gt;&lt;/wiki-info-panel-content&gt; &lt;!-- Signature image --&gt;
+
+  &lt;/wiki-info-panel&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>Panel title</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <p>
+                        Add title within <code>&lt;wiki-info-panel title="..."&gt;</code><br>
+                      </p><br>
+                    </div>
+                  </div>
+
+
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>Panel content</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <p>Content title<br>
+                        <code>&lt;wiki-info-panel-content title="..."&gt;</code></p>
+                        <p>Content<br><code>&lt;wiki-info-panel-content&gt;<br>...<br>&lt;/wiki-info-panel-content&gt;</code></p><br>
+                      </div>
+                    </div>
+
+                    <div class="row col-md-12 space-content">
+                      <div class="row col-md-3 col-sm-12">
+                        <p>Add image</p>
+                      </div>
+
+                      <div class="row col-md-9 col-sm-12">
+                       <p>Panel lead image <br>
+                         Add <code>img-src="..."</code> to <code>&lt;wiki-info-panel title="Mahatma Ghandi" img-src="..."&gt;</code>
+                       </p>
+                       <p>Content image<br>
+                         Add <code>img-src="..."</code> to <code>&lt;wiki-info-panel-content title="Signature" img-src="..."&gt;</code>
+                       </p><br>
+                     </div>
+                   </div>
+
+                   
+
+
+
+
+
+        <!-- ----------------- 
+                   CARDS 
+                   ----------------- -->
+
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="cards" class="page-header">
+                      <a class="anchorjs-link " href="#cards" aria-label="Anchor link for: cards"></a>
+                      Cards
+                    </h2>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Simple cards</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="row col-md-6 col-sm-12">
+                        <wiki-card orientation="portrait">
+                          <wiki-card-title>
+                            Card title
+                          </wiki-card-title>
+                          <wiki-card-content>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus sodales arcu, non semper tellus.
+                          </wiki-card-content>
+                          <wiki-card-label>
+                            Card category
+                          </wiki-card-label> 
+                        </wiki-card>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12">
+                        <wiki-card orientation="portrait" img-src="https://upload.wikimedia.org/wikipedia/commons/9/90/Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg">
+                          <wiki-card-title>
+                            Martin Luther
+                          </wiki-card-title>
+                          <wiki-card-content>
+                            Lucas Cranach der Ältere (1528)
+                          </wiki-card-content>
+                        </wiki-card>
+                      </div>
+                    </div>
+                  </div>
+
+                 <!-- CODE SNIPPET FOR BASIC CARDS -->
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic card --&gt;
+&lt;div class="col-md-6 col-sm-12"&gt;
+
+  &lt;wiki-card orientation="portrait"&gt;
+    &lt;wiki-card-title&gt; Card title&lt;/wiki-card-title&gt;
+    &lt;wiki-card-content&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus sodales arcu, non semper tellus. &lt;/wiki-card-content&gt;
+    &lt;wiki-card-label&gt; Card category &lt;/wiki-card-label&gt; 
+  &lt;/wiki-card&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic card 2 --&gt;
+&lt;div class="col-md-6 col-sm-12"&gt;
+  &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1KtH8xw"&gt;
+    &lt;wiki-card-title&gt; Martin Luther &lt;/wiki-card-title&gt;
+    &lt;wiki-card-content&gt; Lucas Cranach der Ältere (1528) &lt;/wiki-card-content&gt;
+  &lt;/wiki-card&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Complex cards</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="row col-md-6 col-sm-12">
+                        <wiki-card orientation="portrait" img-src="http://bit.ly/1r9qZdP">
+                          <wiki-card-title>
+                            Lunar Libration
+                          </wiki-card-title>
+                          <wiki-card-content>
+                            Simulated views of the Moon over one month, demonstrating librations in latitude and longitude. Also visible are the different phases, and the variation in visual size caused by the variable distance from Earth.<br><br>
+                            <button is='wiki-Button' type="submit" button-type="primary" button-size="sm">
+                              Read more
+                            </button>
+                          </wiki-card-content>
+                        </wiki-card>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12">
+                        <wiki-card orientation="portrait" img-src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Fluxus_manifesto.jpg">
+                          <wiki-card-title>
+                            Fluxus
+                          </wiki-card-title>
+                          <wiki-card-label icon='wikiglyph-cite'>
+                            Fair use - Fluxus Debris
+                          </wiki-card-label>
+                          <wiki-card-content>
+                            The fluxus manifesto, a visual document written in 1963 by George Maciunas
+                          </wiki-card-content>
+
+                          <a href="#">Fluxus</a>
+                          <a href="#">Visual art movement</a>
+
+                        </wiki-card>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <!-- CODE SNIPPET FOR COMPLEX CARDS -->
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Complex card --&gt;
+&lt;div class="col-md-6 col-sm-12"&gt;
+
+  &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1r9qZdP"&gt;
+    &lt;wiki-card-title&gt; Lunar Libration &lt;/wiki-card-title&gt;
+    &lt;wiki-card-content&gt; Simulated views of the Moon over one month, demonstrating librations in latitude and longitude. Also visible are the different phases, and the variation in visual size caused by the variable distance from Earth.&lt;br&gt;
+
+      &lt;!-- Button --&gt;
+      &lt;button is='wiki-Button' type="submit" button-type="primary" button-size="sm"&gt;
+        Read more
+      &lt;/button&gt;
+      
+    &lt;/wiki-card-content&gt;
+  &lt;/wiki-card&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Complex card 2 --&gt;
+&lt;div class="col-md-6 col-sm-12"&gt;
+
+  &lt;wiki-card orientation="portrait" img-src="http://bit.ly/1t0xQaP"&gt;
+    &lt;wiki-card-title&gt; Fluxus &lt;/wiki-card-title&gt;
+    &lt;wiki-card-label icon='wikiglyph-cite'&gt; Fair use - Fluxus Debris &lt;/wiki-card-label&gt;
+    &lt;wiki-card-content&gt; The fluxus manifesto, a visual document written in 1963 by George Maciunas &lt;/wiki-card-content&gt;
+
+    &lt;!-- Footer buttons --&gt;
+    &lt;a href="#"&gt;Fluxus&lt;/a&gt; 
+    &lt;a href="#"&gt;Visual art movement&lt;/a&gt;
+  &lt;/wiki-card&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Landscape cards</p>
+                    </div>
+                    
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="row col-md-9 col-sm-12">
+                        <wiki-card orientation="landscape" img-src="https://upload.wikimedia.org/wikipedia/en/f/f7/Dada1.jpg">
+
+                          <wiki-card-title>
+                            Dada1 
+                          </wiki-card-title>
+                          <wiki-card-label icon='wikiglyph-cite'>
+                            Fair use - Edited by Tristan Tzara. Zürich, 1917. via Wikimedia Commons
+                          </wiki-card-label>
+                          <wiki-card-content>
+                            Cover of the first edition of the publication, ''Dada''
+                          </wiki-card-content>
+                        </wiki-card>
+                      </div>
+
+                    </div>
+                    </div>
+
+
+                <!-- CODE SNIPPET FOR LANDSCAPE CARDS -->
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;div class="col-md-10 col-sm-12"&gt;
+  &lt;wiki-card orientation="landscape" img-src="http://bit.ly/1UlMW12"&gt;
+
+    &lt;wiki-card-title&gt; Dada1 &lt;/wiki-card-title&gt;
+    &lt;wiki-card-label icon='wikiglyph-cite'&gt; Fair use - Edited by Tristan Tzara. Zürich, 1917. via Wikimedia Commons &lt;/wiki-card-label&gt;
+    &lt;wiki-card-content&gt; Cover of the first edition of the publication, ''Dada''&lt;/wiki-card-content&gt;
+
+  &lt;/wiki-card&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>Card content</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <p>TItle <br>
+                       <code>&lt;wiki-card-title&gt;<br>...<br>&lt;/wiki-card-title&gt;</code>
+                     </p>
+                     <p>Content<br>
+                       <code>&lt;wiki-card-content&gt;<br>...<br>&lt;/wiki-card-content&gt;</code><br>
+                     </p>
+                   </div>
+                 </div>
+
+
+                 <div class="row col-md-12 space-content">
+                  <div class="row col-md-3 col-sm-12">
+                    <p>Tags / Label</p>
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+                    <p>
+                     Add <code>&lt;a href="#"...&lt;/a&gt;</code> before <code>&lt;/wiki-card&gt;</code>
+                   </p>
+                 </div>
+               </div>
+
+
+               <div class="row col-md-12 space-content">
+                <div class="row col-md-3 col-sm-12">
+                  <p>Image</p>
+                </div>
+
+                <div class="row col-md-9 col-sm-12">
+                  <p>
+                   Add <code>img-src="..."</code> to <code>&lt;wiki-card img-src="..."&gt;</code>
+                 </p>
+               </div>
+             </div>
+
+
+             <div class="row col-md-12 space-content">
+              <div class="row col-md-3 col-sm-12">
+                <p>Landscape orientation</p>
+              </div>
+
+              <div class="row col-md-9 col-sm-12">
+                <p>
+                  Change <code>orientation="..."</code> within <code>&lt;wiki-card&gt;</code>
+                  <ul>
+                    <li>
+                      Portrait
+                    </li>
+                    <li>
+                      Landscape
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+
+
+        <!-- ----------------- 
+                   CARDS - ALTERNATIVE
+                   ----------------- -->
+
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="cards-alternative" class="page-header">
+                      <a class="anchorjs-link " href="#cards-alternative" aria-label="Anchor link for: alternative cards"></a>
+                      Alternative cards
+                    </h2>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Simple card</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="row col-md-6 col-sm-12">
+                        <wiki-stat title='Card title' sub-title="Card subtitle">
+                          <wiki-stat-content>
+                            100%
+                          </wiki-stat-content>
+                        </wiki-stat>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p class="title-section">Complex cards</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="row col-md-6 col-sm-12">
+                        <wiki-stat title='"San Francisco" article views' sub-title="JAN 2015">
+                          <wiki-stat-content>
+                            450,000
+                          </wiki-stat-content>
+
+                          <a href="#">San Francisco</a>
+                          <a href="#">Article view</a>
+                        </wiki-stat>
+                      </div>
+                    </div>
+                  </div>
+
+
+                                  <!-- CODE SNIPPET FOR ALTERNATIVE CARDS -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Basic alternative card --&gt;
+&lt;div class="row col-md-6 col-sm-12"&gt;
+
+  &lt;wiki-stat title='Card title' sub-title="Card subtitle"&gt;
+    &lt;wiki-stat-content&gt;
+      100%
+    &lt;/wiki-stat-content&gt;
+  &lt;/wiki-stat&gt;
+  
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;!-- Complex alternative card --&gt;
+&lt;div class="row col-md-6 col-sm-12"&gt;
+
+  &lt;wiki-stat title='"San Francisco" article views' sub-title="JAN 2015"&gt;
+    &lt;wiki-stat-content&gt; 450,000 &lt;/wiki-stat-content&gt;
+
+    &lt;!-- Footer buttons --&gt;
+    &lt;a href="#"&gt;San Francisco&lt;/a&gt;
+    &lt;a href="#"&gt;Article view&lt;/a&gt;
+  &lt;/wiki-stat&gt;
+
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>Alternative card content</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <p>Title<br>
+                       Add <code>title='...'</code> to <code>&lt;wiki-stat&gt;</code>
+                     </p><br>
+                     <p>Subtitle<br>
+                       Add <code>sub-title='...'</code> to <code>&lt;wiki-stat&gt;</code>
+                     </p><br>
+                     <p>Content<br>
+                       <code>&lt;wiki-stat-content&gt;<br>...<br>&lt;/wiki-stat-content&gt;</code>
+                     </p><br>
+                   </div>
+                 </div>
+
+
+                 <div class="row col-md-12 space-content">
+                  <div class="row col-md-3 col-sm-12">
+                    <p>Tags / Label</p>
+                  </div>
+
+                  <div class="row col-md-9 col-sm-12">
+                    <p>
+                     Add <code>&lt;a href="#"...&lt;/a&gt;</code> before <code>&lt;/wiki-stat&gt;</code>
+                   </p><br>
+                 </div>
+               </div>
+
+
+
+
+
+          <!-- ----------------- 
+                   RESPONSIVE EMBED 
+                   ----------------- -->
+
+
+
+                   <div class="row col-md-12 space-section">
+                    <h2 id="cards-alternative" class="page-header">
+                      <a class="anchorjs-link " href="#cards-alternative" aria-label="Anchor link for: responsive embed"></a>
+                      Responsive embed
+                    </h2>
+                  </div>
+
+                  <div class="row col-md-12 space-content">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>Embed a video</p>
+                    </div>
+
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SirOxIeuNDE?list=RDSirOxIeuNDE"></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <!-- CODE SNIPPET FOR RESPONSIVE EMBED -->
+                  <div class="row col-md-12 space-section">
+                    <div class="row col-md-3 col-sm-12">
+                      <p>
+                        Code snippet
+                      </p>
+                    </div>
+                    <div class="row col-md-9 col-sm-12">
+                      <div class="snippet-group">
+                        <div class="snippet-code">
+                          <pre>
+                            <code class="language-markup">
+&lt;div class="embed-responsive embed-responsive-4by3"&gt;
+  &lt;iframe class="embed-responsive-item" src="http://bit.ly/1Pe13Ut"&gt;&lt;/iframe&gt; &lt;!-- Video link --&gt;
+&lt;/div&gt;</code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+                    </div>
+                    </div>
+
+
+
+                    <footer>
+                      <p class="info-footer">
+                        Developed by the Wikimedia Foundation    /    
+                        Media from <a href="https://commons.wikimedia.org">Wikimedia Commons</a>    /  
+                        <a href="https://phabricator.wikimedia.org/tag/ui-standardization">Phabricator board</a>    /    
+                        <a href="https://github.com/munmay/WikimediaUI">  Github</a>
+                      </p>
+                    </footer>
+
+
+                    
+
+
+
+
+                  <!-- Placed at the end of the document so the pages load faster -->
+                  <script src="MW/svg4everybody.min.js"></script>
+                  <script>svg4everybody(); </script>
+                  <script src="assets/prism.js"></script>
+                  <script src="assets/snippets.js"></script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                  <script src="bootstrap-3.3.5-dist/js/docs.min.js"></script>
+                  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                  <script src="bootstrap-3.3.5-dist/js/ie10-viewport-bug-workaround.js"></script>
+                  <script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/webcomponentsjs/0.7.16/webcomponents.min.js"></script>
+
+                  <script>
+                    $('.demo-icon a').click(function(){
+
+                      var icon = $(this).find('wiki-icon').attr('icon');
+                  //$(".icon-example-code").html(icon)
+                  $(".xicon-example").html('<wiki-icon icon="'+icon+'"></wiki-icon>');
+                  $(".xicon-example-component").html("&lt;wiki-icon icon='"+icon+"'&gt;&lt;/wiki-icon&gt;");
+                  return false;
+                })
+              </script>
+
+
+
+            </body>
+
+            </html>
