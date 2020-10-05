@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Python Flask Image Upload and Display Example</title>
+<h2>Insert your poster</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filename %}
+	<div>
+		<img src="{{ url_for('display_image', filename=filename) }}">
+	</div>
+{% endif %}
+{% if filenames %}
+	<div>
+		<p>This is your color pallete :)</p>
+		<img src="{{ url_for('finish_image', filenames=filenames) }}">
+
+		<p>Score Harmoni : {{score}} </p>
+   		<p>{{scorevalue}}</p>
+
+	</div>
+{% endif %}
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>

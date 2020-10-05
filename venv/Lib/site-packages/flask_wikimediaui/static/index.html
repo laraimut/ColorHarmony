@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mediawiki UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="MW/mediawiki.min.css">
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/docs.min.css">
+  <link rel="import" href="http://munmay.com/mwui/mw/elements.html">
+</head>
+
+<style type="text/css">
+h3{
+  margin: 2em 0;
+}
+  body{
+    background-color: #f9f9f9;
+  }
+  img:hover{
+    background-color: #00AF89; 
+  }
+  .card-body{
+    padding-bottom: .3em;
+  }
+
+  li a:first-child {
+    border-left: none !important;
+  }
+
+  #bs-example-navbar-collapse-1 {
+    padding-left: 0;
+  }
+
+  .navbar-default {
+    box-shadow: none;
+  }
+
+  .navbar {
+    border: none;
+  }
+
+  .wm-section {
+    padding: 1.5em 0 2.5em 0;
+  }
+
+  .row-stack{
+   -moz-column-width: 12em;
+   -webkit-column-width: 12em;
+   -moz-column-gap: 1em;
+   -webkit-column-gap:1em; 
+ }
+
+ .item {
+   display: inline-block;
+   width:  100%; 
+ }
+
+ .well {
+   position:relative;
+   display: block;
+   padding: 0 !important;
+ }
+
+ img{
+  background-color: #165C91;
+}
+.info-footer{
+  font-size: 12px;
+  color: #f9f9f9;
+  padding: 1em;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.info-footer a{
+  color: #f9f9f9;
+}
+footer{
+  background-color: #333;
+  bottom: 0;
+  display: block;
+  text-align: center;
+}
+
+</style>
+
+
+<!-- -----------
+   COMPONENTS 
+   ------------- -->
+
+
+   <div class="row wm-section">
+
+    <div class='col-md-10 col-md-offset-1'> 
+      <h3>
+        Wikimedia UI
+      </h3>
+    </div>
+
+    <div class="row-stack col-md-10 col-md-offset-1">
+
+      <a href="components.html#icons">
+        <div class="item"> 
+          <div class="well">
+            <wiki-card orientation="portrait" img-src="assets/icons.svg">
+              <wiki-card-title>
+                Icons
+              </wiki-card-title>
+            </wiki-card>
+          </div>
+        </div>
+      </a>
+
+
+      <a href="components.html#layouts">
+        <div class="item"> 
+          <div class="well">
+            <wiki-card orientation="portrait" img-src="assets/layouts.svg">
+              <wiki-card-title>
+                Layouts
+              </wiki-card-title>
+            </wiki-card>
+          </div>
+        </div>
+      </a>
+
+
+<a href="components.html#buttons">
+      <div class="item"> 
+        <div class="well">
+          <wiki-card orientation="portrait" img-src="assets/button.svg">
+            <wiki-card-title>
+              Buttons
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#dropdowns">
+      <div class="item"> 
+        <div class="well">
+          <wiki-card orientation="portrait" img-src="assets/dropdown.svg">
+            <wiki-card-title>
+              Dropdown menu
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#input-groups">
+      <div class="item"> 
+        <div class="well">
+          <wiki-card orientation="portrait" img-src="assets/input-group.svg">
+            <wiki-card-title>
+              Input groups
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#tabs">
+      <div class="item"> 
+        <div class="well"> 
+          <wiki-card orientation="portrait" img-src="assets/tab.svg">
+            <wiki-card-title>
+              Tabs
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#pills">
+      <div class="item"> 
+        <div class="well"> 
+          <wiki-card orientation="portrait" img-src="assets/pill.svg">
+            <wiki-card-title>
+              Pills
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#navigation-bar">
+      <div class="item"> 
+        <div class="well">
+          <wiki-card orientation="portrait" img-src="assets/header.svg">
+            <wiki-card-title>
+              Navigation bar
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+
+<a href="components.html#panels">
+      <div class="item"> 
+        <div class="well"> 
+          <wiki-card orientation="portrait" img-src="assets/panel.svg">
+            <wiki-card-title>
+              Panels
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+<a href="components.html#lists">
+      <div class="item"> 
+        <div class="well">
+          <wiki-card orientation="portrait" img-src="assets/list.svg">
+            <wiki-card-title>
+              Lists
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+
+<a href="components.html#cards">
+      <div class="item"> 
+        <div class="well"> 
+          <wiki-card orientation="portrait" img-src="assets/card.svg">
+            <wiki-card-title>
+              Cards
+            </wiki-card-title>
+          </wiki-card>
+        </div>
+      </div>
+      </a>
+
+
+    </div>
+  </div>
+
+<footer>
+  <p class="info-footer">
+    Developed by the Wikimedia Foundation    /      
+    <a href="https://phabricator.wikimedia.org/tag/ui-standardization">Phabricator board</a>    /    
+    <a href="https://github.com/munmay/WikimediaUI">  Github</a>
+  </p>
+</footer>
+
+
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="MW/svg4everybody.min.js"></script>
+  <script>svg4everybody(); </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="bootstrap-3.3.5-dist/js/docs.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="bootstrap-3.3.5-dist/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/webcomponentsjs/0.7.16/webcomponents.min.js"></script>
+
+</body>
+</html>
