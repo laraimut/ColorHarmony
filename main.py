@@ -1,13 +1,10 @@
 import os
 from app import app
-import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import cv2
 from Solver import Solver
-import PIL as PIL
-from PIL import Image
-from PIL import ImageTk
+
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 

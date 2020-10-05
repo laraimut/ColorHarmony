@@ -8,9 +8,6 @@ from PIL import ImageDraw,Image
 from skimage.color import lab2rgb
 import numpy as np
 from sklearn.cluster import MeanShift, estimate_bandwidth
-from tkinter import filedialog
-from tkinter import *
-from PIL import ImageTk
 import time
 
 
